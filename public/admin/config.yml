@@ -22,7 +22,7 @@ collections:
         label: "Portfolio List"
         file: "src/data/portfolio.json"
         format: "json"
-        create: false
+        create: true
         delete: false
         fields:
           - label: "Projects"

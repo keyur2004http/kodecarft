@@ -2,13 +2,13 @@
 import React from "react"
 import { Squares } from "./ui/square"
 import { motion } from "framer-motion";
-import projects from "../data/portfolio.json";
+import portfolioData from "../data/portfolio.json";
 import { Link } from "react-router-dom";
 import caseStudies from "../data/case-studies.json";
 
 
 const PortfolioSection = () => {
-
+  const projects = portfolioData.projects;
   return (
 
     <section className="bg-black py-24 px-2 md:px-12 lg:px-24 text-white" id="portfolio">

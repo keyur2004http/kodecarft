@@ -17,26 +17,29 @@ display_url: https://kodecarft.netlify.app/
 collections:
   - name: "portfolio"
     label: "Portfolio Projects"
-    file: "src/data/portfolio.json"
-    format: "json"
-    create: false
-    delete: false
-    fields:
-      - label: "Projects"
-        name: "projects"
-        widget: "list"
+    files:
+      - name: "portfolio"
+        label: "Portfolio List"
+        file: "src/data/portfolio.json"
+        format: "json"
+        create: false
+        delete: false
         fields:
-          - { label: "ID", name: "id", widget: "number" }
-          - { label: "Title", name: "title", widget: "string" }
-          - { label: "Description", name: "description", widget: "text" }
-          - { label: "Main Image URL", name: "imageUrl", widget: "string" }
-          - { label: "Secondary Image URL", name: "imageUrl2", widget: "string" }
-          - { label: "Live Link", name: "link", widget: "string" }
-          - label: "Tags"
-            name: "tags"
+          - label: "Projects"
+            name: "projects"
             widget: "list"
-            field: { label: "Tag", name: "tag", widget: "string" }
-          - { label: "Slug", name: "slug", widget: "string" }
+            fields:
+              - { label: "ID", name: "id", widget: "number" }
+              - { label: "Title", name: "title", widget: "string" }
+              - { label: "Description", name: "description", widget: "text" }
+              - { label: "Main Image URL", name: "imageUrl", widget: "string" }
+              - { label: "Secondary Image URL", name: "imageUrl2", widget: "string" }
+              - { label: "Live Link", name: "link", widget: "string" }
+              - label: "Tags"
+                name: "tags"
+                widget: "list"
+                field: { label: "Tag", name: "tag", widget: "string" }
+              - { label: "Slug", name: "slug", widget: "string" }
 
   - name: "services"
     label: "Services"

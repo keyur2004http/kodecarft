@@ -19,30 +19,29 @@ display_url: https://your-site-name.netlify.app
 collections:
   # ✅ Portfolio
   - name: "portfolio"
-    label: "Portfolio"
-    folder: "src/data"
-    create: false
-    files:
-      - name: "portfolio"
-        label: "Portfolio Items"
-        file: "src/data/portfolio.json"
-        format: "json"
-        fields:
-          - label: "Projects"
-            name: ""
-            widget: "list"
-            fields:
-              - { label: "ID", name: "id", widget: "number" }
-              - { label: "Title", name: "title", widget: "string" }
-              - { label: "Description", name: "description", widget: "text" }
-              - { label: "Image URL", name: "imageUrl", widget: "image" }
-              - { label: "Second Image URL", name: "imageUrl2", widget: "image", required: false }
-              - {
-                  label: "Tags",
-                  name: "tags",
-                  widget: "list",
-                  field: { label: "Tag", name: "tag", widget: "string" }
-                }
+  label: "Portfolio Projects"
+  file: "src/data/portfolio.json"
+  format: "json"
+  create: false
+  delete: false
+  fields:
+    - label: "Projects"
+      name: ""
+      widget: "list"
+      fields:
+        - { label: "ID", name: "id", widget: "number" }
+        - { label: "Title", name: "title", widget: "string" }
+        - { label: "Description", name: "description", widget: "text" }
+        - { label: "Main Image URL", name: "imageUrl", widget: "string" }
+        - { label: "Secondary Image URL", name: "imageUrl2", widget: "string" }
+        - { label: "Live Link", name: "link", widget: "string" }
+        - label: "Tags"
+          name: "tags"
+          widget: "list"
+          field:
+            { label: "Tag", name: "", widget: "string" }
+        - { label: "Slug", name: "slug", widget: "string" }
+
 
   # ✅ Pricing
   # - name: "pricing"
@@ -67,37 +66,42 @@ collections:
 
   # ✅ Services
   - name: "services"
-    label: "Services"
-    label_singular: "Service"
-    folder: "public/data"
-    create: false
-    delete: false
-    files:
-      - name: "services"
-        label: "Services List"
-        file: "public/data/services.json"
-        fields:
-          - label: "Services"
-            name: "services"
-            widget: "list"
-            fields:
-              - { label: "Icon", name: "icon", widget: "select", options: ["Brush", "Smartphone", "Search", "CodeXml", "LayoutTemplate", "Globe"] }
-              - { label: "Title", name: "title", widget: "string" }
-              - { label: "Description", name: "description", widget: "text" }
+  label: "Services"
+  folder: "src/data"
+  create: false
+  delete: false
+  files:
+    - name: "services"
+      label: "Service List"
+      file: "src/data/services.json"
+      format: "json"
+      fields:
+        - label: "Services"
+          name: ""
+          widget: "list"
+          fields:
+            - { label: "Icon Name", name: "icon", widget: "select", options: ["Brush", "Smartphone", "Search", "CodeXml", "LayoutTemplate", "Globe"] }
+            - { label: "Title", name: "title", widget: "string" }
+            - { label: "Description", name: "description", widget: "text" }
+
 
   # ✅ CTA / Testimonials (FIXED)
-  - name: "cta"
-    label: "Client Testimonials"
-    files: # <-- Added the 'files' array here
-      - name: "cta_data" # A unique identifier for this specific file
-        label: "Testimonials Data" # A human-readable label for this file
-        file: "src/data/cta.json"
-        fields:
-          - label: "Testimonials"
-            name: "testimonials"
-            widget: "list"
-            fields:
-              - { label: "Name", name: "name", widget: "string" }
-              - { label: "Designation", name: "designation", widget: "string" }
-              - { label: "Quote", name: "quote", widget: "text" }
-              - { label: "Image", name: "src", widget: "image" }
+  - name: "testimonials"
+  label: "Client Testimonials"
+  folder: "src/data"
+  create: false
+  delete: false
+  files:
+    - name: "testimonials"
+      label: "Testimonials List"
+      file: "src/data/testimonials.json"
+      format: "json"
+      fields:
+        - label: "Testimonials"
+          name: ""
+          widget: "list"
+          fields:
+            - { label: "Quote", name: "quote", widget: "text" }
+            - { label: "Name", name: "name", widget: "string" }
+            - { label: "Designation", name: "designation", widget: "string" }
+            - { label: "Image", name: "src", widget: "image" }

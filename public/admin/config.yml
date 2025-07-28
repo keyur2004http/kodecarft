@@ -2,106 +2,71 @@ backend:
   name: git-gateway
   branch: main
   repo: keyur2004http/kodecarft
-
   squash_merges: true
   commit_messages:
     create: "Create {{collection}} “{{slug}}”"
     update: "Update {{collection}} “{{slug}}”"
     delete: "Delete {{collection}} “{{slug}}”"
 
-
 media_folder: "public/Assets"
 public_folder: "/Assets"
 
-site_url: https://your-site-name.netlify.app
-display_url: https://your-site-name.netlify.app 
+site_url: https://kodecarft.netlify.app/
+display_url: https://kodecarft.netlify.app/
 
 collections:
-  # ✅ Portfolio
   - name: "portfolio"
-  label: "Portfolio Projects"
-  file: "src/data/portfolio.json"
-  format: "json"
-  create: false
-  delete: false
-  fields:
-    - label: "Projects"
-      name: ""
-      widget: "list"
-      fields:
-        - { label: "ID", name: "id", widget: "number" }
-        - { label: "Title", name: "title", widget: "string" }
-        - { label: "Description", name: "description", widget: "text" }
-        - { label: "Main Image URL", name: "imageUrl", widget: "string" }
-        - { label: "Secondary Image URL", name: "imageUrl2", widget: "string" }
-        - { label: "Live Link", name: "link", widget: "string" }
-        - label: "Tags"
-          name: "tags"
-          widget: "list"
-          field:
-            { label: "Tag", name: "", widget: "string" }
-        - { label: "Slug", name: "slug", widget: "string" }
+    label: "Portfolio Projects"
+    file: "src/data/portfolio.json"
+    format: "json"
+    create: false
+    delete: false
+    fields:
+      - label: "Projects"
+        name: "projects"
+        widget: "list"
+        fields:
+          - { label: "ID", name: "id", widget: "number" }
+          - { label: "Title", name: "title", widget: "string" }
+          - { label: "Description", name: "description", widget: "text" }
+          - { label: "Main Image URL", name: "imageUrl", widget: "string" }
+          - { label: "Secondary Image URL", name: "imageUrl2", widget: "string" }
+          - { label: "Live Link", name: "link", widget: "string" }
+          - label: "Tags"
+            name: "tags"
+            widget: "list"
+            field: { label: "Tag", name: "tag", widget: "string" }
+          - { label: "Slug", name: "slug", widget: "string" }
 
-
-  # ✅ Pricing
-  # - name: "pricing"
-  #   label: "Pricing Section"
-  #   folder: "Resources/pricing"
-  #   create: false
-  #   files:
-  #     - name: "pricing"
-  #       label: "Pricing Data"
-  #       file: "Resources/pricing/pricing.json"
-  #       fields:
-  #         - { label: "Heading", name: "heading", widget: "string" }
-  #         - { label: "Subheading", name: "subheading", widget: "string" }
-  #         - label: "Plans"
-  #           name: "plans"
-  #           widget: "list"
-  #           fields:
-  #             - { label: "Name", name: "name", widget: "string" }
-  #             - { label: "Price", name: "price", widget: "string" }
-  #             - { label: "Highlight (Most Popular)", name: "highlight", widget: "boolean", default: false }
-  #             - { label: "Features", name: "features", widget: "list", field: { label: "Feature", name: "feature", widget: "string" } }
-
-  # ✅ Services
   - name: "services"
-  label: "Services"
-  folder: "src/data"
-  create: false
-  delete: false
-  files:
-    - name: "services"
-      label: "Service List"
-      file: "src/data/services.json"
-      format: "json"
-      fields:
-        - label: "Services"
-          name: ""
-          widget: "list"
-          fields:
-            - { label: "Icon Name", name: "icon", widget: "select", options: ["Brush", "Smartphone", "Search", "CodeXml", "LayoutTemplate", "Globe"] }
-            - { label: "Title", name: "title", widget: "string" }
-            - { label: "Description", name: "description", widget: "text" }
+    label: "Services"
+    files:
+      - name: "services"
+        label: "Service List"
+        file: "src/data/services.json"
+        format: "json"
+        fields:
+          - label: "Services"
+            name: "services"
+            widget: "list"
+            fields:
+              - { label: "Icon Name", name: "icon", widget: "select", options: ["Brush", "Smartphone", "Search", "CodeXml", "LayoutTemplate", "Globe"] }
+              - { label: "Title", name: "title", widget: "string" }
+              - { label: "Description", name: "description", widget: "text" }
 
-
-  # ✅ CTA / Testimonials (FIXED)
   - name: "testimonials"
-  label: "Client Testimonials"
-  folder: "src/data"
-  create: false
-  delete: false
-  files:
-    - name: "testimonials"
-      label: "Testimonials List"
-      file: "src/data/testimonials.json"
-      format: "json"
-      fields:
-        - label: "Testimonials"
-          name: ""
-          widget: "list"
-          fields:
-            - { label: "Quote", name: "quote", widget: "text" }
-            - { label: "Name", name: "name", widget: "string" }
-            - { label: "Designation", name: "designation", widget: "string" }
-            - { label: "Image", name: "src", widget: "image" }
+    label: "Client Testimonials"
+    files:
+      - name: "testimonials"
+        label: "Testimonials List"
+        file: "src/data/testimonials.json"
+        format: "json"
+        fields:
+          - label: "Testimonials"
+            name: "testimonials"
+            widget: "list"
+            fields:
+              - { label: "Quote", name: "quote", widget: "text" }
+              - { label: "Name", name: "name", widget: "string" }
+              - { label: "Designation", name: "designation", widget: "string" }
+              - { label: "Image", name: "src", widget: "image" }

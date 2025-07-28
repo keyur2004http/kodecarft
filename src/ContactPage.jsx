@@ -156,11 +156,11 @@ useEffect(() => {
                   <p className="text-white-800 :text-white-600">[Your Street Address], [Your City], [Your State/Country]</p>
                 </li>
               </ul>
-              <div className="flex space-x-6 mt-10">
+              {/* <div className="flex space-x-6 mt-10">
                 <a href="#" className="text-white-700 :text-white-500 hover:text-purple-600 "><Linkedin size={28} /></a>
                 <a href="#" className="text-white-700 :text-white-500 hover:text-indigo-600 "><Instagram size={28} /></a>
                 <a href="#" className="text-white-700 :text-white-500 hover:text-pink-600 "><Twitter size={28} /></a>
-              </div>
+              </div> */}
             </motion.div>
 
             {/* RIGHT PANEL */}

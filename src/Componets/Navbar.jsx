@@ -1,14 +1,11 @@
 import React, { useState } from "react"
-import { Lamp, Menu, X } from "lucide-react"
+import { Menu, X } from "lucide-react"
 import { motion, AnimatePresence } from "framer-motion"
 
 
 export const Navbar = ({ navItems = [] }) => {
   const [isOpen, setIsOpen] = useState(false)
-  const underlineVariants = {
-    hidden: { width: 0 },
-    visible: { width: "100%", transition: { duration: 0.4 } },
-  };
+
 
   return (
     <>

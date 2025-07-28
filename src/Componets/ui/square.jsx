@@ -99,6 +99,10 @@ export function Squares({
           gridOffset.current.y =
             (gridOffset.current.y - effectiveSpeed + squareSize) % squareSize;
           break;
+          default:
+  console.warn(`Unknown direction: ${direction}`);
+  break;
+
       }
 
       drawGrid();

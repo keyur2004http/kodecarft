@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from "react";
-import { motion, AnimatePresence } from "framer-motion";
+import { motion } from "framer-motion";
 import sampleTestimonials from "../data/testimonials.json"
 // Helper function to conditionally join class names (similar to 'clsx' or 'classnames')
 function cn(...classes) {
@@ -65,14 +65,13 @@ export const AnimatedTestimonials = ({
     return index === active;
   };
 
-
   useEffect(() => {
     if (autoplay) {
       const interval = setInterval(handleNext, 5000);
       return () => clearInterval(interval);
     }
-  }, [autoplay, testimonials.length]);
-
+  }, [autoplay, handleNext]);
+  
 
   const randomRotateY = () => {
     return Math.floor(Math.random() * 21) - 10;

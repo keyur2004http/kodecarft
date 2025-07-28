@@ -1,0 +1,20 @@
+[
+    {
+      "id": 1,
+      "title": "Marketing Agency Site",
+      "description": "A professional multi-page website for a real client",
+      "imageUrl": "/Assets/second_page.jpeg",
+      "imageUrl2": "/Assets/first_page.jpeg",
+      "link":"https://infinityglobaltechnologies.com/",
+      "tags": ["UX/UI Design", "Live Client Project"],
+      "slug": "infinity"
+    },
+    {
+      "id": 2,
+      "title": "Stridath E-commerce",
+      "description": "A clean and modern online store built with a custom design system and headless CMS.",
+      "imageUrl": "/Assets/first_side.jpeg",
+      "tags": ["UX/UI Design", "E-Commerce"]
+    }
+  ]
+  

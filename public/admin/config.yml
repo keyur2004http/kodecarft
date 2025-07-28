@@ -1,0 +1,92 @@
+backend:
+  name: git-gateway
+  branch: main
+
+media_folder: "public/Assets"
+public_folder: "/Assets"
+
+collections:
+  # ✅ Portfolio
+  - name: "portfolio"
+    label: "Portfolio"
+    folder: "src/data"
+    create: false
+    files:
+      - name: "portfolio"
+        label: "Portfolio Items"
+        file: "src/data/portfolio.json"
+        format: "json"
+        fields:
+          - label: "Projects"
+            name: ""
+            widget: "list"
+            fields:
+              - { label: "ID", name: "id", widget: "number" }
+              - { label: "Title", name: "title", widget: "string" }
+              - { label: "Description", name: "description", widget: "text" }
+              - { label: "Image URL", name: "imageUrl", widget: "image" }
+              - { label: "Second Image URL", name: "imageUrl2", widget: "image", required: false }
+              - {
+                  label: "Tags",
+                  name: "tags",
+                  widget: "list",
+                  field: { label: "Tag", name: "tag", widget: "string" }
+                }
+
+  # ✅ Pricing
+  # - name: "pricing"
+  #   label: "Pricing Section"
+  #   folder: "Resources/pricing"
+  #   create: false
+  #   files:
+  #     - name: "pricing"
+  #       label: "Pricing Data"
+  #       file: "Resources/pricing/pricing.json"
+  #       fields:
+  #         - { label: "Heading", name: "heading", widget: "string" }
+  #         - { label: "Subheading", name: "subheading", widget: "string" }
+  #         - label: "Plans"
+  #           name: "plans"
+  #           widget: "list"
+  #           fields:
+  #             - { label: "Name", name: "name", widget: "string" }
+  #             - { label: "Price", name: "price", widget: "string" }
+  #             - { label: "Highlight (Most Popular)", name: "highlight", widget: "boolean", default: false }
+  #             - { label: "Features", name: "features", widget: "list", field: { label: "Feature", name: "feature", widget: "string" } }
+
+  # ✅ Services
+  - name: "services"
+    label: "Services"
+    label_singular: "Service"
+    folder: "public/data"
+    create: false
+    delete: false
+    files:
+      - name: "services"
+        label: "Services List"
+        file: "public/data/services.json"
+        fields:
+          - label: "Services"
+            name: "services"
+            widget: "list"
+            fields:
+              - { label: "Icon", name: "icon", widget: "select", options: ["Brush", "Smartphone", "Search", "CodeXml", "LayoutTemplate", "Globe"] }
+              - { label: "Title", name: "title", widget: "string" }
+              - { label: "Description", name: "description", widget: "text" }
+
+  # ✅ CTA / Testimonials (FIXED)
+  - name: "cta"
+    label: "Client Testimonials"
+    files: # <-- Added the 'files' array here
+      - name: "cta_data" # A unique identifier for this specific file
+        label: "Testimonials Data" # A human-readable label for this file
+        file: "src/data/cta.json"
+        fields:
+          - label: "Testimonials"
+            name: "testimonials"
+            widget: "list"
+            fields:
+              - { label: "Name", name: "name", widget: "string" }
+              - { label: "Designation", name: "designation", widget: "string" }
+              - { label: "Quote", name: "quote", widget: "text" }
+              - { label: "Image", name: "src", widget: "image" }

@@ -1,0 +1,43 @@
+{
+    "heading": "Choose Your Plan",
+    "subheading": "Flexible pricing for every stage of your business.",
+    "plans": [
+      {
+        "name": "Starter",
+        "price": "$49",
+        "highlight": false,
+        "features": [
+          "1 Page Website",
+          "Basic Animations",
+          "Responsive Design",
+          "3 Revisions",
+          "Basic SEO Setup"
+        ]
+      },
+      {
+        "name": "Pro",
+        "price": "$99",
+        "highlight": true,
+        "features": [
+          "5 Pages Website",
+          "Advanced Animations",
+          "SEO Friendly",
+          "Fast Loading",
+          "5 Revisions"
+        ]
+      },
+      {
+        "name": "Enterprise",
+        "price": "Custom",
+        "highlight": false,
+        "features": [
+          "Unlimited Pages",
+          "Fully Custom Animations",
+          "Dedicated Support",
+          "Unlimited Revisions",
+          "E-commerce"
+        ]
+      }
+    ]
+  }
+  

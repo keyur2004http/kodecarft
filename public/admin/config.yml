@@ -123,45 +123,45 @@ collections:
           - { label: "Link", name: "link", widget: "string" }
 
 # FAQ
-- name: "faq"
-  label: "FAQ Section"
-  files:
-    - name: "faq"
-      label: "FAQ"
-      file: "src/data/faq.json"
-      format: "json"
-      create: true
-      delete: false
-      fields:
-        - label: "Categories"
-          name: "categories"
-          widget: "object"
-          fields:
-            - { label: "General", name: "general", widget: "string" }
-            - { label: "Design", name: "design", widget: "string" }
-            - { label: "Development", name: "development", widget: "string" }
+  - name: "faq"
+    label: "FAQ Section"
+    files:
+      - name: "faq"
+        label: "FAQ"
+        file: "src/data/faq.json"
+        format: "json"
+        create: true
+        delete: false
+        fields:
+          - label: "Categories"
+            name: "categories"
+            widget: "object"
+            fields:
+              - { label: "General", name: "general", widget: "string" }
+              - { label: "Design", name: "design", widget: "string" }
+              - { label: "Development", name: "development", widget: "string" }
 
-        - label: "FAQ Data"
-          name: "faqData"
-          widget: "object"
-          fields:
-            - label: "General"
-              name: "general"
-              widget: "list"
-              fields:
-                - { label: "Question", name: "question", widget: "string" }
-                - { label: "Answer", name: "answer", widget: "text" }
+          - label: "FAQ Data"
+            name: "faqData"
+            widget: "object"
+            fields:
+              - label: "General"
+                name: "general"
+                widget: "list"
+                fields:
+                  - { label: "Question", name: "question", widget: "string" }
+                  - { label: "Answer", name: "answer", widget: "text" }
 
-            - label: "Design"
-              name: "design"
-              widget: "list"
-              fields:
-                - { label: "Question", name: "question", widget: "string" }
-                - { label: "Answer", name: "answer", widget: "text" }
+              - label: "Design"
+                name: "design"
+                widget: "list"
+                fields:
+                  - { label: "Question", name: "question", widget: "string" }
+                  - { label: "Answer", name: "answer", widget: "text" }
 
-            - label: "Development"
-              name: "development"
-              widget: "list"
-              fields:
-                - { label: "Question", name: "question", widget: "string" }
-                - { label: "Answer", name: "answer", widget: "text" }
+              - label: "Development"
+                name: "development"
+                widget: "list"
+                fields:
+                  - { label: "Question", name: "question", widget: "string" }
+                  - { label: "Answer", name: "answer", widget: "text" }

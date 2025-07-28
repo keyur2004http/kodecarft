@@ -2,7 +2,7 @@ import React, { useState, useEffect } from 'react';
 import { motion } from 'framer-motion';
 import { useLocation } from "react-router-dom";
 
-import { Mail, Phone, MapPin, Linkedin, Instagram, Twitter, Send } from 'lucide-react';
+import { Mail, Phone, MapPin, Send } from 'lucide-react';
 import { Navbar } from './Componets/Navbar';
 import emailjs from '@emailjs/browser';
 import Footer from './Componets/Footer';

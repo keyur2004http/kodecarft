@@ -23,7 +23,7 @@ collections:
     file: "src/data/portfolio.json"
     format: "json"
     create: true
-    delete: false
+    delete: true
     fields:
     - label: "Projects"
       name: "projects"
@@ -51,7 +51,7 @@ collections:
     file: "src/data/services.json"
     format: "json"
     create: true
-    delete: false
+    delete: true
     fields:
     - label: "Services"
       name: "services"
@@ -70,7 +70,7 @@ collections:
     file: "src/data/testimonials.json"
     format: "json"
     create: true
-    delete: false
+    delete: true
     fields:
     - label: "Testimonial Entries"
       name: "testimonials"
@@ -87,6 +87,7 @@ collections:
   label_singular: "Case Study"
   folder: "public/data"
   create: true
+  delete: true
   extension: "json"
   format: "json"
   identifier_field: "slug"

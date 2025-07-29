@@ -58,19 +58,20 @@ collections:
               - { label: "Icon Name", name: "icon", widget: "select", options: ["Brush", "Smartphone", "Search", "CodeXml", "LayoutTemplate", "Globe"] }
               - { label: "Title", name: "title", widget: "string" }
               - { label: "Description", name: "description", widget: "text" }
-# Testimonials
-  - name: "testimonials"
+- name: "testimonials"
     label: "Client Testimonials"
     files:
       - name: "testimonials"
         label: "Testimonials List"
-        name: "testimonials"
         file: "src/data/testimonials.json"
         format: "json"
+        create: true
+        delete: false
         fields:
-          - label: "Testimonials"
+          - label: "Testimonial Entries"
             name: "testimonials"
             widget: "list"
+            allow_add: true
             fields:
               - { label: "Quote", name: "quote", widget: "text" }
               - { label: "Name", name: "name", widget: "string" }

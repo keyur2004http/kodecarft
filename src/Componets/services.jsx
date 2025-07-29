@@ -1,5 +1,4 @@
 // src/components/Services.jsx
-
 import React from "react";
 import { motion, useAnimation } from "framer-motion";
 import {
@@ -10,8 +9,7 @@ import {
   CodeXml,
   Globe,
 } from "lucide-react";
-import services from "../data/services.json";
-
+import serviceData from "../data/services.json";
 const iconMap = {
   Brush,
   Smartphone,
@@ -38,6 +36,7 @@ const underlineVariants = {
 const ServiceCard = ({ icon, title, description, index }) => {
   const Icon = iconMap[icon] || Brush;
   const underlineControls = useAnimation();
+  
 
   return (
     <motion.div
@@ -87,6 +86,7 @@ const ServiceCard = ({ icon, title, description, index }) => {
 };
 
 const Services = () => {
+  const services = serviceData.services;
   return (
     <section
       id="services"

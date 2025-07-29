@@ -1,0 +1,42 @@
+{
+    "slug": "sidhharth",
+    "title": "Agency Website Case Study",
+    "description": "A deep dive into how we built a high-performing, professional online presence for a real marketing agency.",
+    "screenshots": [
+      { "src": "/case-study/homepage.png", "alt": "Homepage" },
+      { "src": "/case-study/about.png", "alt": "About Page" },
+      { "src": "/case-study/services.png", "alt": "Services Page" }
+    ],
+    "goals": [
+      "Build brand trust and authority online",
+      "Increase lead generation through clear CTAs",
+      "Display services and projects effectively"
+    ],
+    "solutions": [
+      "Custom multi-page design with SEO optimization",
+      "Fast loading and mobile-friendly layout",
+      "Integrated blog and project case studies"
+    ],
+    "results": [
+      {
+        "icon": "Rocket",
+        "title": "Performance",
+        "desc": "90+ Lighthouse scores on all pages."
+      },
+      {
+        "icon": "BarChart3",
+        "title": "Conversion",
+        "desc": "Boosted form submissions by 40% in 2 months."
+      },
+      {
+        "icon": "Briefcase",
+        "title": "Credibility",
+        "desc": "Professional look helped close deals faster."
+      }
+    ],
+    "cta": {
+      "text": "Want a Website Like This?",
+      "buttonText": "Let’s Work Together",
+      "link": "/contact"
+    }
+  }

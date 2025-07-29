@@ -11,7 +11,7 @@ const ContactPage = () => {
   const [formData, setFormData] = useState({
     name: '',
     email: '',
-    phone: '+91',
+    phone: '+91 ',
     message: ''
   });
   const [errors, setErrors] = useState({});
@@ -32,7 +32,7 @@ useEffect(() => {
 }, [location.search]);
 
   useEffect(() => {
-    emailjs.init('S8FoA1225qZi8g1Dj');
+    emailjs.init('lzfcEZnXskCxvGka2');
   }, []);
 
 
@@ -72,8 +72,8 @@ useEffect(() => {
     setSubmitMessage("Sending your message...");
 
     try {
-      const serviceId = 'service_hd5tw9j';
-      const templateId = 'template_kpkqw2m';
+      const serviceId = 'service_pxq42po';
+      const templateId = 'template_6ktcf44';
       const templateParams = {
         from_name: formData.name,
         from_email: formData.email,
@@ -129,7 +129,7 @@ useEffect(() => {
           </motion.h2>
 
           <motion.p className="text-lg sm:text-xl text-white max-w-2xl mx-auto mb-16 mt-8 leading-relaxed" initial="hidden" whileInView="visible" viewport={{ once: true, amount: 0.5 }} variants={sectionVariants}>
-            Have a project in mind, a question, or just want to say hello? Reach out to Kinfinity!
+            Have a project in mind, a question, or just want to say hello? Reach out to KodeCarft!
           </motion.p>
 
           {/* GLASS CONTAINER */}
@@ -140,12 +140,12 @@ useEffect(() => {
             <motion.div className="lg:w-1/2 flex flex-col justify-center mb-10 lg:mb-0 lg:pr-8" initial="hidden" whileInView="visible" viewport={{ once: true, amount: 0.3 }} variants={contactInfoVariants}>
               <h3 className="text-3xl font-bold text-white-900  mb-6">Get in Touch</h3>
               <p className="text-white-700 text-white-500 mb-8 leading-relaxed">
-                We're excited to hear from you and discuss how Kinfinity can help bring your digital vision to life.
+                We're excited to hear from you and discuss how KodeCarft can help bring your digital vision to life.
               </p>
               <ul className="space-y-6 text-lg">
                 <li className="flex items-center">
                   <Mail className="w-7 h-7 text-purple-600 mr-4" />
-                  <a href="mailto:your_email@kinfinity.com" className="text-white-800 :text-white-600 hover:text-purple-600 :hover:text-purple-400 transition-colors">your_email@kinfinity.com</a>
+                  <a href="mailto:kodecarft@gmail.com" className="text-white-800 :text-white-600 hover:text-purple-600 :hover:text-purple-400 transition-colors">kodecarft@gmail.com</a>
                 </li>
                 <li className="flex items-center">
                   <Phone className="w-7 h-7 text-indigo-600 :text-indigo-400 mr-4" />

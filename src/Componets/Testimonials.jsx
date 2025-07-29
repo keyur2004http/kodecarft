@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from "react";
 import { motion } from "framer-motion";
-import sampleTestimonials from "../data/testimonials.json"
+import testimonialsData from "../data/testimonials.json"
 // Helper function to conditionally join class names (similar to 'clsx' or 'classnames')
 function cn(...classes) {
   return classes.filter(Boolean).join(' ');
@@ -190,7 +190,9 @@ export const AnimatedTestimonials = ({
 };
 // Main App Component to demonstrate AnimatedTestimonials
 export default function App() {
+  const sampleTestimonials = testimonialsData.testimonials;
   return (
+
     <div className="min-h-screen bg-gradient-to-b from-bg-[#0e0e12] via-black to-white/10 py-20 px-4">
   <div className="text-center mb-16">
     <h2 className="text-4xl md:text-5xl font-bold mb-4 bg-gradient-to-b from-white to-grey-100 bg-clip-text text-transparent">

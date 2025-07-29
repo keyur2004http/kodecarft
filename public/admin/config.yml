@@ -40,7 +40,7 @@ collections:
                 widget: "list"
                 field: { label: "Tag", name: "tag", widget: "string" }
               - { label: "Slug", name: "slug", widget: "string" }
-
+# Service
   - name: "services"
     label: "Services"
     files:
@@ -48,6 +48,8 @@ collections:
         label: "Service List"
         file: "src/data/services.json"
         format: "json"
+        create: true
+        delete: false
         fields:
           - label: "Services"
             name: "services"
@@ -62,6 +64,7 @@ collections:
     files:
       - name: "testimonials"
         label: "Testimonials List"
+        name: "testimonials"
         file: "src/data/testimonials.json"
         format: "json"
         fields:

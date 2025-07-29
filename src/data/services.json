@@ -1,4 +1,5 @@
-[
+{
+  "services": [
     {
       "icon": "Brush",
       "title": "Custom Web Design",
@@ -24,11 +25,10 @@
       "title": "Easily Manageable Website",
       "description": "We build websites that are simple to update and maintain, so you can change content anytime without technical knowledge."
     },
-    
     {
       "icon": "Globe",
       "title": "Website Launch & Support",
       "description": "Providing seamless website deployment, ongoing maintenance, and dedicated technical support."
     }
   ]
-  
+}

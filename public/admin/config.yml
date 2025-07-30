@@ -95,11 +95,11 @@ collections:
   extension: "json"
   format: "json"
   identifier_field: "slug"
-  media_folder: "public/Assets/case-study"
-  public_folder: "/Assets/case-study"
+  media_folder: "/public/assets/case-study"
+  public_folder: "/assets/case-study"
   fields:
   - { label: "Slug", name: "slug", widget: "string" }
-  - { label: "Title", "name": "title", widget: "string" }
+  - { label: "Title", name: "title", widget: "string" }
   - { label: "Description", name: "description", widget: "text" }
   - label: "Screenshots"
     name: "screenshots"
@@ -131,6 +131,7 @@ collections:
     widget: "list"
     allow_add: true
     fields:
+    # <--- Corrected indentation here!
     - { label: "Name", name: "name", widget: "string" }
     - label: "Icon"
       name: "icon"
@@ -151,7 +152,6 @@ collections:
     - { label: "Text", name: "text", widget: "string" }
     - { label: "Button Text", name: "buttonText", widget: "string" }
     - { label: "Link", name: "link", widget: "string" }
-
 - name: "faq"
   label: "FAQ Section"
   files:
@@ -173,21 +173,21 @@ collections:
       name: "faqData"
       widget: "object"
       fields:
-      - label: "General"
+      - label: "General Questions" # Added a more descriptive label
         name: "general"
         widget: "list"
         allow_add: true
         fields:
         - { label: "Question", name: "question", widget: "string" }
         - { label: "Answer", name: "answer", widget: "text" }
-      - label: "Design"
+      - label: "Design Questions" # Added a more descriptive label
         name: "design"
         widget: "list"
         allow_add: true
         fields:
         - { label: "Question", name: "question", widget: "string" }
         - { label: "Answer", name: "answer", widget: "text" }
-      - label: "Development"
+      - label: "Development Questions" # Added a more descriptive label
         name: "development"
         widget: "list"
         allow_add: true

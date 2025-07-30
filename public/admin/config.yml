@@ -9,7 +9,7 @@ backend:
     delete: "Delete {{collection}} “{{slug}}”"
 
 media_folder: "public/Assets/uploads"
-public_folder: "/Assets/uploads"
+public_folder: "Assets/uploads"
 
 site_url: https://kodecarft.netlify.app/
 display_url: https://kodecarft.netlify.app/

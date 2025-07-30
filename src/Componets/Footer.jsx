@@ -53,11 +53,15 @@ const Footer = () => {
           <p className="text-lg text-gray-600 dark:text-gray-400 mt-2">
             Crafting Digital Experiences
           </p>
+          <p className="text-sm text-gray-500 dark:text-gray-400 mt-6 max-w-xl mx-auto">
+  KodeCarft is a creative digital agency delivering tailor-made web solutions, marketing strategies, and brand experiences.
+</p>
+
         </motion.div>
 
         {/* Navigation Links */}
         <motion.nav variants={itemVariants} className="mb-10">
-          <ul className="flex flex-wrap justify-center gap-x-8 gap-y-4 text-lg font-medium">
+          <ul className="flex flex-wrap justify-center gap-x-8 gap-y-4 text-base font-medium">
             <motion.li variants={itemVariants}>
               <a href="#services" className="hover:text-purple-600 dark:hover:text-purple-400 transition-colors">Services</a>
             </motion.li>

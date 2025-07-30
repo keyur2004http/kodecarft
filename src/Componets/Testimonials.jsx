@@ -71,7 +71,7 @@ export const AnimatedTestimonials = ({
       return () => clearInterval(interval);
     }
   }, [autoplay, handleNext]);
-  
+
 
   const randomRotateY = () => {
     return Math.floor(Math.random() * 21) - 10;
@@ -83,51 +83,51 @@ export const AnimatedTestimonials = ({
         {/* Testimonial Image Section */}
         <div>
           <div className="relative h-80 w-full">
-            
-              {testimonials.map((testimonial, index) => (
-                <motion.div
-                  key={testimonial.src}
-                  initial={{
-                    opacity: 0,
-                    scale: 0.9,
-                    z: -100,
-                    rotate: randomRotateY(),
-                  }}
-                  animate={{
-                    opacity: isActive(index) ? 1 : 0.7,
-                    scale: isActive(index) ? 1 : 0.95,
-                    z: isActive(index) ? 0 : -100,
-                    rotate: isActive(index) ? 0 : randomRotateY(),
-                    zIndex: isActive(index) ? 999 : testimonials.length + 2 - index,
-                    y: isActive(index) ? [0, -80, 0] : 0,
-                  }}
-                  exit={{
-                    opacity: 0,
-                    scale: 0.9,
-                    z: 100,
-                    rotate: randomRotateY(),
-                  }}
-                  transition={{
-                    duration: 0.4,
-                    ease: "easeInOut",
-                  }}
-                  className="absolute inset-0 origin-bottom"
-                >
+
+            {testimonials.map((testimonial, index) => (
+              <motion.div
+                key={testimonial.src}
+                initial={{
+                  opacity: 0,
+                  scale: 0.9,
+                  z: -100,
+                  rotate: randomRotateY(),
+                }}
+                animate={{
+                  opacity: isActive(index) ? 1 : 0.7,
+                  scale: isActive(index) ? 1 : 0.95,
+                  z: isActive(index) ? 0 : -100,
+                  rotate: isActive(index) ? 0 : randomRotateY(),
+                  zIndex: isActive(index) ? 999 : testimonials.length + 2 - index,
+                  y: isActive(index) ? [0, -80, 0] : 0,
+                }}
+                exit={{
+                  opacity: 0,
+                  scale: 0.9,
+                  z: 100,
+                  rotate: randomRotateY(),
+                }}
+                transition={{
+                  duration: 0.4,
+                  ease: "easeInOut",
+                }}
+                className="absolute inset-0 origin-bottom"
+              >
+                <div className="flex flex-col items-center justify-center h-full w-full bg-white/10 backdrop-blur-xl backdrop-saturate-150 rounded-3xl text-center p-6">
                   <img
                     src={testimonial.src}
                     alt={testimonial.name}
-                    width={500}
-                    height={500}
-                    draggable={false}
-                    className="h-full w-full rounded-3xl object-cover object-center"
+                    className="w-50 h-40 rounded-full object-cover mb-4 border border-white shadow-lg"
                     onError={(e) => {
                       e.currentTarget.onerror = null;
-                      e.currentTarget.src = `https://placehold.co/500x500/444/ccc?text=Image+Error`;
+                      e.currentTarget.src = `https://placehold.co/100x100/444/ccc?text=Image+Error`;
                     }}
                   />
-                </motion.div>
-              ))}
-            
+                 
+                </div>
+              </motion.div>
+            ))}
+
           </div>
         </div>
 
@@ -194,17 +194,17 @@ export default function App() {
   return (
 
     <div className="min-h-screen bg-gradient-to-b from-bg-[#0e0e12] via-black to-white/10 py-20 px-4">
-  <div className="text-center mb-16">
-    <h2 className="text-4xl md:text-5xl font-bold mb-4 bg-gradient-to-b from-white to-grey-100 bg-clip-text text-transparent">
-      Client Review
-    </h2>
-    <p className="text-lg text-gray-300">
-    What our clients say about working with us
-    </p>
-  </div>
+      <div className="text-center mb-16">
+        <h2 className="text-4xl md:text-5xl font-bold mb-4 bg-gradient-to-b from-white to-grey-100 bg-clip-text text-transparent">
+          Client Review
+        </h2>
+        <p className="text-lg text-gray-300">
+          What our clients say about working with us
+        </p>
+      </div>
 
-  <AnimatedTestimonials testimonials={sampleTestimonials} autoplay={true} />
-</div>
+      <AnimatedTestimonials testimonials={sampleTestimonials} autoplay={true} />
+    </div>
 
   );
 }

@@ -1,16 +1,17 @@
-import React, { useState, useEffect } from "react";
+import React, { useEffect, useState } from "react";
 import { ChevronLeft, ChevronRight } from "lucide-react";
 
 const ScreenshotCarousel = ({ screenshots }) => {
   const [index, setIndex] = useState(0);
-  const [imagesPerPage, setImagesPerPage] = useState(2);
+  const [imagesPerPage, setImagesPerPage] = useState(2); // Show 2 images
 
-  // Responsive image count
   useEffect(() => {
     const handleResize = () => {
-      setImagesPerPage(window.innerWidth < 768 ? 1 : 2);
+      const width = window.innerWidth;
+      if (width < 640) setImagesPerPage(1);
+      else setImagesPerPage(2); // Always max 2 images visible
     };
-    handleResize(); // Set initial
+    handleResize();
     window.addEventListener("resize", handleResize);
     return () => window.removeEventListener("resize", handleResize);
   }, []);
@@ -18,11 +19,11 @@ const ScreenshotCarousel = ({ screenshots }) => {
   const totalPages = Math.ceil(screenshots.length / imagesPerPage);
 
   const next = () => {
-    setIndex((prev) => Math.min(prev + 1, totalPages - 1));
+    if (index < totalPages - 1) setIndex(index + 1);
   };
 
   const prev = () => {
-    setIndex((prev) => Math.max(prev - 1, 0));
+    if (index > 0) setIndex(index - 1);
   };
 
   const currentImages = screenshots.slice(
@@ -31,12 +32,41 @@ const ScreenshotCarousel = ({ screenshots }) => {
   );
 
   return (
-    <div className="relative w-full max-w-6xl mx-auto py-6">
-      {/* Buttons */}
+    <div className="relative w-full max-w-5xl mx-auto py-10 px-4">
+      {/* Arrows */}
+
+
+      {/* Image Display */}
+      <div className="flex justify-center gap-6">
+        {currentImages.map((img, i) => (
+          <div
+            key={i}
+            className="w-full sm:w-1/2 flex items-center justify-center"
+          >
+            <img
+              src={img.src}
+              alt={img.alt}
+              className="w-full h-auto max-h-[400px] object-contain rounded-xl shadow"
+            />
+          </div>
+        ))}
+      </div>
+
+      {/* Dots */}
+      <div className="flex justify-center gap-2 mt-4">
+        {Array.from({ length: totalPages }).map((_, i) => (
+          <span
+            key={i}
+            className={`w-2 h-2 rounded-full ${i === index ? "bg-indigo-500" : "bg-gray-300"
+              }`}
+          ></span>
+        ))}
+      </div>
+      <div className="flex justify-center gap-4 mt-10">
       <button
         onClick={prev}
         disabled={index === 0}
-        className="absolute  top-1/2 -translate-y-1/2 z-10 bg-white/60 text-white p-2 rounded-full disabled:opacity-30"
+        className="h-10 w-10 rounded-full bg-white/10 hover:bg-white/20 text-white flex items-center justify-center group/button shadow-md transition-colors duration-300 transform hover:scale-105"
       >
         <ChevronLeft />
       </button>
@@ -44,26 +74,11 @@ const ScreenshotCarousel = ({ screenshots }) => {
       <button
         onClick={next}
         disabled={index === totalPages - 1}
-        className="absolute right-0 top-1/2 -translate-y-1/2 z-10 bg-white/60 text-white p-2 rounded-full disabled:opacity-30"
+        className=" h-10 w-10 rounded-full bg-white/10 hover:bg-white/20 text-white flex items-center justify-center group/button shadow-md transition-colors duration-300 transform hover:scale-105"
       >
         <ChevronRight />
       </button>
-
-      {/* Image Grid */}
-      <div className="flex flex-wrap justify-center gap-6 px-4">
-  {currentImages.map((img, i) => (
-    <div
-      key={i}
-      className="w-full md:w-[38%] h-[300px] flex items-center justify-center rounded-xl shadow-lg overflow-hidden bg-gray-100"
-    >
-      <img
-        src={img.src}
-        alt={img.alt}
-        className="w-full h-full object-cover object-top "
-      />
-    </div>
-  ))}
-</div>
+      </div>
 
     </div>
   );

@@ -1,7 +1,7 @@
 [
 {
     "slug": "infinity",
-    "title": "Marketing Agency Website Case Study",
+    "title": "Marketing Agency Website ",
     "description": "A deep dive into how we built a high-performing, professional online presence for a real marketing agency.",
     "screenshots": [
       { "src": "/Assets/case-study/home.png", "alt": "Homepage" },
@@ -10,17 +10,32 @@
       { "src": "/Assets/case-study/portfolio-product.png", "alt": "Portfolio-Product" },
       { "src": "/Assets/case-study/service.png", "alt": "Services Page" },
       { "src": "/Assets/case-study/service.png", "alt": "Services Page" }
-    ],
+    ],"technologies": [
+      {
+        "name": "HTML5",
+        "icon": "FaHtml5"
+      },
+      {
+        "name": "Tailwind",
+        "icon": "FaCss3Alt"
+      },
+      {
+        "name": "JavaScript",
+        "icon": "FaJs"
+      }
+    ],    
     "goals": [
-      "Build brand trust and authority online",
-      "Increase lead generation through clear CTAs",
-      "Display services and projects effectively"
+      "Establish a trustworthy and professional online presence",
+      "Generate leads through direct contact options like WhatsApp and email",
+      "Showcase products and services in a clean, easy-to-navigate layout"
     ],
     "solutions": [
-      "Custom multi-page design with SEO optimization",
-      "Fast loading and mobile-friendly layout",
-      "Integrated blog and project case studies"
+      "Custom multi-page design tailored to client’s budget",
+      "Fast-loading, mobile-responsive layout with minimal classic design",
+      "Integrated email form, WhatsApp link, and full social media connectivity"
     ],
+    
+    
     "results": [
       {
         "icon": "Rocket",

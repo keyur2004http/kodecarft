@@ -4,8 +4,8 @@
       "id": 1,
       "title": "Marketing Agency Site",
       "description": "A professional multi-page website for a real client",
-      "imageUrl": "/Assets/second_page.jpeg",
-      "imageUrl2": "/Assets/first_page.jpeg",
+      "imageUrl": "/Assets/portfolio/second_page.jpeg",
+      "imageUrl2": "/Assets/portfolio/first_page.jpeg",
       "link": "https://infinityglobaltechnologies.com/",
       "tags": ["UX/UI Design", "Live Client Project"],
       "slug": "infinity"

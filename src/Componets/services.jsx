@@ -36,52 +36,54 @@ const underlineVariants = {
 const ServiceCard = ({ icon, title, description, index }) => {
   const Icon = iconMap[icon] || Brush;
   const underlineControls = useAnimation();
-  
+
 
   return (
     <motion.div
-    className="rounded-3xl p-8 text-left border border-white/10 relative overflow-hidden group 
+      className=" rounded-3xl p-8 text-left border border-white/10 relative overflow-hidden group 
                bg-white/10 backdrop-blur-xl backdrop-saturate-150 shadow-xl hover:shadow-2xl 
                hover:backdrop-blur-2xl transition-all duration-300 cursor-pointer"
-    initial="hidden"
-    whileInView="visible"
-    viewport={{ once: true, amount: 0.3 }}
-    variants={cardVariants}
-    custom={index}
-    whileHover={{
-      scale: 1.05,
-      y: -8,
-      boxShadow: "0 20px 40px rgba(0,0,0,0.4)",
-    }}
-    onHoverStart={() => underlineControls.start("visible")}
-    onHoverEnd={() => underlineControls.start("hidden")}
-  >
-    {/* Icon */}
-    <motion.div
-      className="w-16 h-16 rounded-full bg-gradient-to-br from-purple-400 to-indigo-600 
+      initial="hidden"
+      whileInView="visible"
+      viewport={{ once: true, amount: 0.3 }}
+      variants={cardVariants}
+      custom={index}
+      whileHover={{
+        scale: 1.05,
+        y: -8,
+        boxShadow: "0 20px 40px rgba(0,0,0,0.4)",
+      }}
+      onHoverStart={() => underlineControls.start("visible")}
+      onHoverEnd={() => underlineControls.start("hidden")}
+    >
+      
+
+      {/* Icon */}
+      <motion.div
+        className="w-16 h-16 rounded-full bg-gradient-to-br from-purple-400 to-indigo-600 
                  text-white flex items-center justify-center mb-6 shadow-md 
                  group-hover:scale-110 group-hover:rotate-6 transition"
-      whileHover={{ scale: 1.1, rotate: 5 }}
-    >
-      <Icon className="w-8 h-8" strokeWidth={2.5} />
+        whileHover={{ scale: 1.1, rotate: 5 }}
+      >
+        <Icon className="w-8 h-8" strokeWidth={2.5} />
+      </motion.div>
+
+      {/* Title */}
+      <h3 className="text-2xl font-bold text-white mb-3 relative inline-block">
+        {title}
+        <motion.span
+          className="block h-1 bg-gradient-to-r bg-gradient-to-b from-white to-indigo-600 absolute bottom-[-8px] left-0"
+          variants={underlineVariants}
+          initial="hidden"
+          animate={underlineControls}
+        ></motion.span>
+      </h3>
+
+      {/* Description */}
+      <p className="text-gray-300 text-base leading-relaxed">{description}</p>
     </motion.div>
-  
-    {/* Title */}
-    <h3 className="text-2xl font-bold text-white mb-3 relative inline-block">
-      {title}
-      <motion.span
-        className="block h-1 bg-gradient-to-r bg-gradient-to-b from-white to-indigo-600 absolute bottom-[-8px] left-0"
-        variants={underlineVariants}
-        initial="hidden"
-        animate={underlineControls}
-      ></motion.span>
-    </h3>
-  
-    {/* Description */}
-    <p className="text-gray-300 text-base leading-relaxed">{description}</p>
-  </motion.div>
-  
-);
+
+  );
 
 };
 
@@ -92,9 +94,9 @@ const Services = () => {
       id="services"
       className="relative py-20 sm:py-28  text-white overflow-hidden"
     >
-      
-      
-      
+
+
+
       {/* 🟡 Foreground content */}
       <div className="relative z-10 max-w-7xl mx-auto px-4 lg:px-8 text-center">
         <motion.h2

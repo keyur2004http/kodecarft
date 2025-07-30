@@ -11,7 +11,7 @@ const PortfolioSection = () => {
   const projects = portfolioData.projects;
   return (
 
-    <section className="bg-black py-24 px-2 md:px-12 lg:px-24 text-white" id="portfolio">
+    <section className="bg-black py-24 px-2.5 md:px-12 lg:px-24 text-white" id="portfolio">
 
       <div className="text-center mb-16">
         <h2 className="text-4xl md:text-5xl font-bold mb-4  bg-gradient-to-b from-white via-gray-300  bg-clip-text text-transparent">Our Latest Work</h2>

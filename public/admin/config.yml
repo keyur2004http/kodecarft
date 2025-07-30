@@ -24,6 +24,8 @@ collections:
     format: "json"
     create: true
     delete: true
+    media_folder: "public/Assets/portfolio"
+    public_folder: "/Assets/portfolio"
     fields:
     - label: "Projects"
       name: "projects"
@@ -71,6 +73,8 @@ collections:
     format: "json"
     create: true
     delete: true
+    media_folder: "public/Assets/testimonials"
+    public_folder: "/Assets/testimonials"
     fields:
     - label: "Testimonial Entries"
       name: "testimonials"
@@ -122,6 +126,24 @@ collections:
     - { label: "Icon", name: "icon", widget: "string" }
     - { label: "Title", name: "title", widget: "string" }
     - { label: "Description", name: "desc", widget: "text" }
+  - label: "Technologies"
+  name: "technologies"
+  widget: "list"
+  allow_add: true
+  fields:
+    - { label: "Name", name: "name", widget: "string" }
+    - label: "Icon"
+      name: "icon"
+      widget: "select"
+      options:
+        - { label: "HTML5", value: "FaHtml5" }
+        - { label: "CSS3", value: "FaCss3Alt" }
+        - { label: "JavaScript", value: "FaJs" }
+        - { label: "WordPress", value: "FaWordpress" }
+        - { label: "React", value: "FaReact" }
+        - { label: "Figma", value: "FaFigma" }
+        - { label: "Node.js", value: "FaNodeJs" }
+        - { label: "Shopify", value: "FaShopify" }
   - label: "Call To Action"
     name: "cta"
     widget: "object"

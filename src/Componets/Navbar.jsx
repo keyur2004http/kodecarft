@@ -12,7 +12,12 @@ export const Navbar = ({ navItems = [] }) => {
       <header className="w-full flex justify-center px-4 pt-6 z-50 sticky">
         <div className=" bg-gradient-to-tr from-zinc-300/20 via-purple-450/30 to-transparent   text-white border-input border-[1px]  px-6 py-3 rounded-full shadow-lg flex justify-between items-center w-full max-w-5xl relative">
           {/* Logo */}
-          <div className="w-8 h-8 bg-gradient-to-br from-orange-400 to-pink-500 rounded-full"></div>
+          <img
+  src="/Assets/logo/kodecarft.p"  // Replace with your actual image path
+  alt="Icon"
+  className="w-8 h-8 rounded-full object-cover"
+/>
+
 
           {/* Desktop Nav */}
           <nav className="hidden md:flex gap-10 sticky">

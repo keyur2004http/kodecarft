@@ -15,21 +15,20 @@ const FAQ = ({ title = "Frequently Asked Questions"
   return (
     <>
     <div className="bg-black min-h-screen flex flex-col">
-  <section className={`flex-grow relative overflow-hidden  px-4 sm:px-6 md:px-12 py-12 text-white ${className}`}>
+  <section className={`flex-grow relative overflow-hidden  px-4 sm:px-6 md:px-12  text-white ${className}`}>
     <div className="max-w-6xl mx-auto">
 
       {/* Navbar */}
-      <div className="flex justify-center w-full mb-16">
-        <Navbar
-          navItems={[
-            { name: "Home", href: "/" },
-            { name: "Service", href: "/#services" },
-                            { name: "Portfolio", href: "#portfolio" },
-                            { name: "Pricing", href: "/#pricing"},
-                            {name: "FAQ", href: "/faq" },
-          ]}
-        />
-      </div>
+            <div className="flex justify-center w-full mb-16">
+              <Navbar
+                navItems={[
+                  { name: "Home", href: "/" },
+                  { name: "Service", href: "/#services" },
+                  { name: "Portfolio", href: "/#portfolio" },
+                  { name: "FAQ", href: "/faq" },
+                ]}
+              />
+            </div>
 
       {/* Header */}
       <Header  title={title} subtitle={subtitle} />

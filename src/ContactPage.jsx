@@ -118,7 +118,14 @@ useEffect(() => {
       <section className="relative  overflow-hidden px-0 pb-10  md:pt-4 "
       >
         <div className="flex justify-center w-full mb-16">
-          <Navbar navItems={[{ name: "Home", href: "/" }]} />
+        <Navbar
+                navItems={[
+                  { name: "Home", href: "/" },
+                  { name: "Service", href: "/#services" },
+                  { name: "Portfolio", href: "/#portfolio" },
+                  { name: "FAQ", href: "/faq" },
+                ]}
+              />
         </div>
 
         <div className="max-w-7xl mx-auto px-2 lg:px-8 text-center relative z-10">
@@ -149,11 +156,7 @@ useEffect(() => {
                 </li>
                 <li className="flex items-center">
                   <Phone className="w-7 h-7 text-indigo-600 :text-indigo-400 mr-4" />
-                  <a href="tel:+1234567890" className="text-white-800 :text-white-600 hover:text-indigo-600 :hover:text-indigo-400 transition-colors">+1 (234) 567-890</a>
-                </li>
-                <li className="flex items-center">
-                  <MapPin className="w-7 h-7 text-pink-600 :text-pink-400 mr-4" />
-                  <p className="text-white-800 :text-white-600">[Your Street Address], [Your City], [Your State/Country]</p>
+                  <a href="tel:+91 7383084925" className="text-white-800 :text-white-600 hover:text-indigo-600 :hover:text-indigo-400 transition-colors">+91 7383084925</a>
                 </li>
               </ul>
               {/* <div className="flex space-x-6 mt-10">

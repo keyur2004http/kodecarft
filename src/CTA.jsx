@@ -34,14 +34,21 @@ const CallToAction = () => {
   {/* ✅ Content Layer */}
   <div className="relative z-10">
     <img
-      src="https://illustrations.popsy.co/white/web-design.svg"
+      src="/Assets/illustration/leadership-amico.png"
       alt="Call Illustration"
       className="w-full h-auto mb-6"
     />
     <h3 className="text-xl font-semibold mb-4 text-center">{data.heading}</h3>
-    <button className="w-full py-3 bg-white font-semibold text-black/70 hover:shadow-[0_0_25px_rgba(255,255,255,0.8)]  hover:bg-indigo-400 hover:text-white scale-105 transition duration-300 rounded-md mb-6">
-      {data.buttonText}
-    </button>
+    <button
+  onClick={() =>
+    (window.location.href =
+      "/contact?message=I need website for my bussiness")
+  }
+  className="w-full py-3 bg-white font-semibold text-black/70 hover:shadow-[0_0_25px_rgba(255,255,255,0.8)] hover:bg-indigo-400 hover:text-white  transition duration-300 rounded-md mb-6"
+>
+  {data.buttonText}
+</button>
+
     <ul className="space-y-2">
       {data.benefits.map((item, index) => (
         <li key={index} className="flex items-center gap-2 text-sm text-gray-200">

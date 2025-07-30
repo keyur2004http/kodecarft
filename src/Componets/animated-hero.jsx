@@ -39,7 +39,7 @@ function HeroSection() {
       className="relative min-h-screen overflow-hidden px-4 pb-12 pt-2 md:pt-4 
       
       bg-[radial-gradient(ellipse_60%_80%_at_50%_-20%,rgba(120,119,198,0.4),rgba(0,0,0,0))] 
-      text-white"
+      text-white "
     >
       {/* Navbar */}
       <div className="flex justify-center w-full mb-16">
@@ -58,12 +58,12 @@ function HeroSection() {
       <div className="w-full overflow-hidden">
         <div className="container mx-auto">
           <div className="flex gap-8 py-12 lg:py-20  items-center justify-center flex-col">
-          <a
-  href="/#websiteAnalysis"
-  className="px-4 py-1.5 text-sm sm:px-5 sm:py-2 sm:text-base bg-white/20 border border-white/30 rounded-full hover:bg-white/5 transition"
->
-  Get Free Website Analysis →
-</a>
+            <a
+              href="/#websiteAnalysis"
+              className="px-4 py-1.5 text-sm sm:px-5 sm:py-2 sm:text-base bg-white/20 border border-white/30 rounded-full hover:bg-white/5 transition"
+            >
+              Get Free Website Analysis →
+            </a>
 
             {/* Title */}
             <div className="flex gap-4 flex-col">
@@ -82,13 +82,13 @@ function HeroSection() {
                       animate={
                         titleNumber === index
                           ? {
-                              y: 0,
-                              opacity: 1,
-                            }
+                            y: 0,
+                            opacity: 1,
+                          }
                           : {
-                              y: titleNumber > index ? -150 : 150,
-                              opacity: 0,
-                            }
+                            y: titleNumber > index ? -150 : 150,
+                            opacity: 0,
+                          }
                       }
                     >
                       {title}
@@ -105,20 +105,24 @@ function HeroSection() {
 
             {/* CTA Button */}
             <div className="flex flex-row gap-3">
-            <button
-  onClick={() => {
-    document.getElementById("portfolio")?.scrollIntoView({ behavior: "smooth" });
-  }}
-  className="inline-flex rounded-full text-center group items-center w-full justify-center bg-gradient-to-tr from-zinc-300/20 to-transparent border border-white hover:shadow-[0_0_35px_rgba(255,255,255,0.8)] transition-all sm:w-auto py-4 px-10"
->
-  Portfolio
-  <MoveRight className="w-5 h-5 ml-2" />
-</button>
+              <button
+                onClick={() => {
+                  document.getElementById("portfolio")?.scrollIntoView({ behavior: "smooth" });
+                }}
+                className="inline-flex rounded-full text-center group items-center w-full justify-center bg-gradient-to-tr from-zinc-300/20 to-transparent border border-white hover:shadow-[0_0_35px_rgba(255,255,255,0.8)] transition-all sm:w-auto py-4 px-10"
+              >
+                Portfolio
+                <MoveRight className="w-5 h-5 ml-2" />
+              </button>
 
             </div>
           </div>
         </div>
       </div>
+   
+
+
+
     </section>
   );
 }

@@ -1,99 +1,196 @@
 backend:
   name: git-gateway
   branch: main
+  repo: keyur2004http/kodecarft
+  squash_merges: true
+  commit_messages:
+    create: "Create {{collection}} “{{slug}}”"
+    update: "Update {{collection}} “{{slug}}”"
+    delete: "Delete {{collection}} “{{slug}}”"
 
-media_folder: "public/Assets"
-public_folder: "/Assets"
+media_folder: "public/Assets/uploads"
+public_folder: "/Assets/uploads"
+
+site_url: https://kodecarft.netlify.app/
+display_url: https://kodecarft.netlify.app/
 
 collections:
-  # Portfolio Section
+- name: "portfolio"
+  label: "Portfolio Projects"
+  files:
   - name: "portfolio"
-    label: "Portfolio"
-    folder: "src/data"
-    create: false
-    files:
-      - name: "portfolio"
-        label: "Portfolio Items"
-        file: "src/data/portfolio.json"
-        format: "json"
-        fields:
-          - label: "Projects"
-            name: ""
-            widget: "list"
-            fields:
-              - { label: "ID", name: "id", widget: "number" }
-              - { label: "Title", name: "title", widget: "string" }
-              - { label: "Description", name: "description", widget: "text" }
-              - { label: "Image URL", name: "imageUrl", widget: "image" }
-              - { label: "Second Image URL", name: "imageUrl2", widget: "image", required: false }
-              - {
-                  label: "Tags",
-                  name: "tags",
-                  widget: "list",
-                  field: { label: "Tag", name: "tag", widget: "string" }
-                }
+    label: "Portfolio List"
+    file: "src/data/portfolio.json"
+    format: "json"
+    create: true
+    delete: true
+    media_folder: "public/Assets/portfolio"
+    public_folder: "/Assets/portfolio"
+    fields:
+    - label: "Projects"
+      name: "projects"
+      widget: "list"
+      allow_add: true
+      fields:
+      - { label: "ID", name: "id", widget: "number" }
+      - { label: "Title", name: "title", widget: "string" }
+      - { label: "Description", name: "description", widget: "text" }
+      - { label: "Main Image URL", name: "imageUrl", widget: "string" }
+      - { label: "Secondary Image URL", name: "imageUrl2", widget: "string" }
+      - { label: "Live Link", name: "link", widget: "string" }
+      - label: "Tags"
+        name: "tags"
+        widget: "list"
+        allow_add: true
+        field: { label: "Tag", name: "tag", widget: "string" }
+      - { label: "Slug", name: "slug", widget: "string" }
 
-  # Pricing Section
-  - name: "pricing"
-    label: "Pricing Section"
-    folder: "Resources/pricing"
-    create: false
-    files:
-      - name: "pricing"
-        label: "Pricing Data"
-        file: "Resources/pricing/pricing.json"
-        fields:
-          - { label: "Heading", name: "heading", widget: "string" }
-          - { label: "Subheading", name: "subheading", widget: "string" }
-          - label: "Plans"
-            name: "plans"
-            widget: "list"
-            fields:
-              - { label: "Name", name: "name", widget: "string" }
-              - { label: "Price", name: "price", widget: "string" }
-              - { label: "Highlight (Most Popular)", name: "highlight", widget: "boolean", default: false }
-              - {
-                  label: "Features",
-                  name: "features",
-                  widget: "list",
-                  field: { label: "Feature", name: "feature", widget: "string" }
-                }
-
-  # Services Section
+- name: "services"
+  label: "Services"
+  files:
   - name: "services"
-    label: "Services"
-    label_singular: "Service"
-    folder: "public/data"
-    create: false
-    delete: false
-    files:
-      - name: "services"
-        label: "Services List"
-        file: "public/data/services.json"
-        fields:
-          - label: "Services"
-            name: "services"
-            widget: "list"
-            fields:
-              - { label: "Icon", name: "icon", widget: "select", options: ["Brush", "Smartphone", "Search", "CodeXml", "LayoutTemplate", "Globe"] }
-              - { label: "Title", name: "title", widget: "string" }
-              - { label: "Description", name: "description", widget: "text" }
+    label: "Service List"
+    file: "src/data/services.json"
+    format: "json"
+    create: true
+    delete: true
+    fields:
+    - label: "Services"
+      name: "services"
+      widget: "list"
+      allow_add: true
+      fields:
+      - { label: "Icon Name", name: "icon", widget: "select", options: [ "Brush", "Smartphone", "Search", "CodeXml", "LayoutTemplate", "Globe" ] }
+      - { label: "Title", name: "title", widget: "string" }
+      - { label: "Description", name: "description", widget: "text" }
 
-  # CTA / Testimonials Section ✅ FIXED
-  - name: "cta"
-    label: "Client Testimonials"
-    folder: "src/data"
-    create: false
-    files:
-      - name: "cta"
-        label: "Testimonials"
-        file: "src/data/cta.json"
+- name: "testimonials"
+  label: "Client Testimonials"
+  files:
+  - name: "testimonials"
+    label: "Testimonials List"
+    file: "src/data/testimonials.json"
+    format: "json"
+    create: true
+    delete: true
+    media_folder: "public/Assets/testimonials"
+    public_folder: "/Assets/testimonials"
+    fields:
+    - label: "Testimonial Entries"
+      name: "testimonials"
+      widget: "list"
+      allow_add: true
+      fields:
+      - { label: "Quote", name: "quote", widget: "text" }
+      - { label: "Name", name: "name", widget: "string" }
+      - { label: "Designation", name: "designation", widget: "string" }
+      - { label: "Image", name: "src", widget: "image" }
+
+- name: "case-studies"
+  label: "Case Studies"
+  label_singular: "Case Study"
+  folder: "public/data"
+  create: true
+  delete: true
+  extension: "json"
+  format: "json"
+  identifier_field: "slug"
+  media_folder: "public/Assets/case-study"
+  public_folder: "/Assets/case-study"
+  fields:
+  - { label: "Slug", name: "slug", widget: "string" }
+  - { label: "Title", "name": "title", widget: "string" }
+  - { label: "Description", name: "description", widget: "text" }
+  - label: "Screenshots"
+    name: "screenshots"
+    widget: "list"
+    allow_add: true
+    fields:
+    - { label: "Image", name: "src", widget: "image" }
+    - { label: "Alt Text", name: "alt", widget: "string" }
+  - label: "Goals"
+    name: "goals"
+    widget: "list"
+    allow_add: true
+    field: { label: "Goal", name: "goal", widget: "string" }
+  - label: "Solutions"
+    name: "solutions"
+    widget: "list"
+    allow_add: true
+    field: { label: "Solution", name: "solution", widget: "string" }
+  - label: "Results"
+    name: "results"
+    widget: "list"
+    allow_add: true
+    fields:
+    - { label: "Icon", name: "icon", widget: "string" }
+    - { label: "Title", name: "title", widget: "string" }
+    - { label: "Description", name: "desc", widget: "text" }
+  - label: "Technologies"
+    name: "technologies"
+    widget: "list"
+    allow_add: true
+    fields:
+    - { label: "Name", name: "name", widget: "string" }
+    - label: "Icon"
+      name: "icon"
+      widget: "select"
+      options:
+      - { label: "HTML5", value: "FaHtml5" }
+      - { label: "CSS3", value: "FaCss3Alt" }
+      - { label: "JavaScript", value: "FaJs" }
+      - { label: "WordPress", value: "FaWordpress" }
+      - { label: "React", value: "FaReact" }
+      - { label: "Figma", value: "FaFigma" }
+      - { label: "Node.js", value: "FaNodeJs" }
+      - { label: "Shopify", value: "FaShopify" }
+  - label: "Call To Action"
+    name: "cta"
+    widget: "object"
+    fields:
+    - { label: "Text", name: "text", widget: "string" }
+    - { label: "Button Text", name: "buttonText", widget: "string" }
+    - { label: "Link", name: "link", widget: "string" }
+
+- name: "faq"
+  label: "FAQ Section"
+  files:
+  - name: "faq"
+    label: "FAQ"
+    file: "src/data/faq.json"
+    format: "json"
+    create: true
+    delete: false
+    fields:
+    - label: "Categories"
+      name: "categories"
+      widget: "object"
+      fields:
+      - { label: "General", name: "general", widget: "string" }
+      - { label: "Design", name: "design", widget: "string" }
+      - { label: "Development", name: "development", widget: "string" }
+    - label: "FAQ Data"
+      name: "faqData"
+      widget: "object"
+      fields:
+      - label: "General"
+        name: "general"
+        widget: "list"
+        allow_add: true
         fields:
-          - label: "Testimonials"
-            name: "testimonials"
-            widget: "list"
-            fields:
-              - { label: "Name", name: "name", widget: "string" }
-              - { label: "Designation", name: "designation", widget: "string" }
-              - { label: "Quote", name: "quote", widget: "text" }
-              - { label: "Image", name: "src", widget: "image" }
+        - { label: "Question", name: "question", widget: "string" }
+        - { label: "Answer", name: "answer", widget: "text" }
+      - label: "Design"
+        name: "design"
+        widget: "list"
+        allow_add: true
+        fields:
+        - { label: "Question", name: "question", widget: "string" }
+        - { label: "Answer", name: "answer", widget: "text" }
+      - label: "Development"
+        name: "development"
+        widget: "list"
+        allow_add: true
+        fields:
+        - { label: "Question", name: "question", widget: "string" }
+        - { label: "Answer", name: "answer", widget: "text" }

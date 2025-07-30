@@ -127,23 +127,24 @@ collections:
     - { label: "Title", name: "title", widget: "string" }
     - { label: "Description", name: "desc", widget: "text" }
   - label: "Technologies"
-  name: "technologies"
-  widget: "list"
-  allow_add: true
-  fields:
+    name: "technologies" # <--- Corrected indentation here!
+    widget: "list" # <--- Corrected indentation here!
+    allow_add: true # <--- Corrected indentation here!
+    fields:
+    # <--- Corrected indentation here!
     - { label: "Name", name: "name", widget: "string" }
     - label: "Icon"
       name: "icon"
       widget: "select"
       options:
-        - { label: "HTML5", value: "FaHtml5" }
-        - { label: "CSS3", value: "FaCss3Alt" }
-        - { label: "JavaScript", value: "FaJs" }
-        - { label: "WordPress", value: "FaWordpress" }
-        - { label: "React", value: "FaReact" }
-        - { label: "Figma", value: "FaFigma" }
-        - { label: "Node.js", value: "FaNodeJs" }
-        - { label: "Shopify", value: "FaShopify" }
+      - { label: "HTML5", value: "FaHtml5" }
+      - { label: "CSS3", value: "FaCss3Alt" }
+      - { label: "JavaScript", value: "FaJs" }
+      - { label: "WordPress", value: "FaWordpress" }
+      - { label: "React", value: "FaReact" }
+      - { label: "Figma", value: "FaFigma" }
+      - { label: "Node.js", value: "FaNodeJs" }
+      - { label: "Shopify", value: "FaShopify" }
   - label: "Call To Action"
     name: "cta"
     widget: "object"
@@ -151,7 +152,6 @@ collections:
     - { label: "Text", name: "text", widget: "string" }
     - { label: "Button Text", name: "buttonText", widget: "string" }
     - { label: "Link", name: "link", widget: "string" }
-
 - name: "faq"
   label: "FAQ Section"
   files:

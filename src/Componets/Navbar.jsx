@@ -12,12 +12,16 @@ export const Navbar = ({ navItems = [] }) => {
       <header className="w-full flex justify-center px-4 pt-6 z-50 sticky">
         <div className=" bg-gradient-to-tr from-zinc-300/20 via-purple-450/30 to-transparent   text-white border-input border-[1px]  px-6 py-3 rounded-full shadow-lg flex justify-between items-center w-full max-w-5xl relative">
           {/* Logo */}
-          <img
-  src="/Assets/logo/kodecarft.p"  // Replace with your actual image path
-  alt="Icon"
-  className="w-8 h-8 rounded-full object-cover"
-/>
-
+          <a class="flex items-center text-white" href="/">
+            <img
+               src="/Assets/logo/Kode-carft-studio.png"// Replace with your actual image path
+              alt="Icon"
+              className="w-10 h-10  rounded-xl object-cover"
+            />
+            <span className="ml-2 text-white font-semibold">
+        KodeCarft
+      </span>
+          </a>
 
           {/* Desktop Nav */}
           <nav className="hidden md:flex gap-10 sticky">
@@ -62,13 +66,13 @@ export const Navbar = ({ navItems = [] }) => {
 
                 {/* ✅ Mobile Menu */}
                 <motion.div
-  initial={{ opacity: 0, y: -10 }}
-  animate={{ opacity: 1, y: 0 }}
-  exit={{ opacity: 0, y: -10 }}
-  className="absolute top-16 left-0 w-full z-50 font-bold rounded-xl py-4 px-6 md:hidden flex flex-col gap-4 
+                  initial={{ opacity: 0, y: -10 }}
+                  animate={{ opacity: 1, y: 0 }}
+                  exit={{ opacity: 0, y: -10 }}
+                  className="absolute top-16 left-0 w-full z-50 font-bold rounded-xl py-4 px-6 md:hidden flex flex-col gap-4 
              shadow-md bg-[url('https://www.transparenttextures.com/patterns/broken-noise.png')] opacity-10 
              bg-repeat bg-white/5 backdrop-blur-md"
->
+                >
 
                   {navItems.map((item) => (
                     <a

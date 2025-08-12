@@ -6,6 +6,8 @@ import { HeroSection } from "./Componets/animated-hero";
 import CallToAction from "./CTA";
 import AnimatedTestimonials from "./Componets/Testimonials";
 import WebsiteAnalysis from "./Componets/analysis";
+import Loader from "./Componets/ui/Loader";
+
 
 
 const HomePage = () => {
@@ -21,6 +23,7 @@ const HomePage = () => {
             <WebsiteAnalysis></WebsiteAnalysis>
            
             <Footer></Footer>
+            
         </div>
     );
 };

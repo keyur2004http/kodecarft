@@ -80,7 +80,7 @@ const StyledWrapper = styled.div`
   }
 
   .boxes .box > div {
-    --background: #5C8DF6;
+    --background: #5170ff;
     --top: auto;
     --right: auto;
     --bottom: auto;
@@ -105,7 +105,7 @@ const StyledWrapper = styled.div`
   }
 
   .boxes .box > div:nth-child(2) {
-    --background: #145af2;
+    --background: #5170ff;
     --right: 0;
     --rotateY: 90deg;
   }

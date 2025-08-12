@@ -30,10 +30,10 @@ const Footer = () => {
   };
 
   return (
-    
+
     <motion.footer
-    
-      className="bg-white dark:bg-black py-16 sm:py-20 font-inter text-gray-700 dark:text-gray-300 relative overflow-hidden mt-10" 
+
+      className="bg-white dark:bg-black py-16 sm:py-20 font-inter text-gray-700 dark:text-gray-300 relative overflow-hidden mt-10"
       initial="hidden"
       whileInView="visible"
       viewport={{ once: true, amount: 0.3 }}
@@ -46,18 +46,30 @@ const Footer = () => {
 
       <div className="max-w-7xl mx-auto px-6 lg:px-8 text-center relative z-10">
         {/* Company Name / Logo */}
-        <motion.div variants={itemVariants} className="mb-8">
-          <h2 className="text-4xl font-extrabold text-gray-900 dark:text-white">
-            <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-900  to-white">KodeCarft</span>
-          </h2>
-          <p className="text-lg text-gray-600 dark:text-gray-400 mt-2">
-            Crafting Digital Experiences
-          </p>
-          <p className="text-sm text-gray-500 dark:text-gray-400 mt-6 max-w-xl mx-auto">
-  KodeCarft is a creative digital agency delivering tailor-made web solutions, marketing strategies, and brand experiences.
-</p>
+        <motion.div variants={itemVariants} className="mb-8 text-center">
+  {/* Logo + Text Wrapper */}
+  <a href="/" className="flex flex-col items-center">
+    <img
+      src="/Assets/logo/Kode-carft-studio.png"
+      alt="Icon"
+      className="w-20 h-20 rounded-xl object-cover "
+    />
+    <h2 className="mt-2 text-2xl font-extrabold text-gray-900 dark:text-white">
+      <span className=" text-white">
+        KodeCarft
+      </span>
+    </h2>
+  </a>
 
-        </motion.div>
+  <p className="text-lg text-gray-600 dark:text-gray-400 mt-2">
+    Crafting Digital Experiences
+  </p>
+  <p className="text-sm text-gray-500 dark:text-gray-400 mt-6 max-w-xl mx-auto">
+    KodeCarft is a creative digital agency delivering tailor-made web
+    solutions, marketing strategies, and brand experiences.
+  </p>
+</motion.div>
+
 
         {/* Navigation Links */}
         <motion.nav variants={itemVariants} className="mb-10">
@@ -67,9 +79,6 @@ const Footer = () => {
             </motion.li>
             <motion.li variants={itemVariants}>
               <a href="#portfolio" className="hover:text-purple-600 dark:hover:text-purple-400 transition-colors">Portfolio</a>
-            </motion.li>
-            <motion.li variants={itemVariants}>
-              <a href="#pricing" className="hover:text-purple-600 dark:hover:text-purple-400 transition-colors">Pricing</a>
             </motion.li>
             <motion.li variants={itemVariants}>
               <a href="#testimonials" className="hover:text-purple-600 dark:hover:text-purple-400 transition-colors">Testimonials</a>
@@ -132,7 +141,7 @@ const Footer = () => {
         </motion.p>
       </div>
     </motion.footer>
-    
+
   );
 };
 

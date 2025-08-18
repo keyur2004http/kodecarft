@@ -117,7 +117,7 @@ export const AnimatedTestimonials = ({
                   <img
                     src={testimonial.src}
                     alt={testimonial.name}
-                    className="w-50 h-40 rounded-full object-cover mb-4 border border-white shadow-lg"
+                    className="w-60 h-60  object-cover mb-4 rounded-full border"
                     onError={(e) => {
                       e.currentTarget.onerror = null;
                       e.currentTarget.src = `https://placehold.co/100x100/444/ccc?text=Image+Error`;

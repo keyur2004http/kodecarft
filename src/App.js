@@ -43,13 +43,8 @@ function App() {
 
   return (
     <>
-      {/* Loader Overlay */}
-      {showLoader && (
-        <div className={`loader-overlay ${loading ? "" : "fade-out"}`}>
-          <Loader />
-        </div>
-      )}
-
+     
+      
       {/* Main App */}
       <BrowserRouter>
         <Routes>

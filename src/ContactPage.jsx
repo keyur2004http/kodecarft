@@ -6,7 +6,7 @@ import { Mail, Phone, MapPin, Send } from 'lucide-react';
 import { Navbar } from './Componets/Navbar';
 import emailjs from '@emailjs/browser';
 import Footer from './Componets/Footer';
-
+import PageMeta from './Componets/PageMeta';
 const ContactPage = () => {
   const [formData, setFormData] = useState({
     name: '',
@@ -114,6 +114,7 @@ useEffect(() => {
 
   return (
     <>
+      <PageMeta title="Contact – Kodecarft" favicon="/favicon.png" />
       <div className=" bg-black text-white ">
       <section className="relative  overflow-hidden px-0 pb-10  md:pt-4 "
       >

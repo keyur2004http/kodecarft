@@ -7,11 +7,18 @@ import CallToAction from "./CTA";
 import AnimatedTestimonials from "./Componets/Testimonials";
 import WebsiteAnalysis from "./Componets/analysis";
 import Loader from "./Componets/ui/Loader";
-
-
+import PageMeta from "./Componets/PageMeta";
+import SeoMeta from "./Componets/SeoMeta";
 
 const HomePage = () => {
     return (
+        <>
+       <SeoMeta
+        title="HomePage – Kodecarft"
+        description="Explore our web design, branding, and digital marketing services crafted for startups and growing businesses."
+        url="https://www.kodecarft.com/services"
+        image="./Assets/logo/openGraph.png"
+      />
         <div className=" bg-black text-gray-900 dark:text-white">
             
             <HeroSection></HeroSection>
@@ -25,6 +32,7 @@ const HomePage = () => {
             <Footer></Footer>
             
         </div>
+        </>
     );
 };
 export default HomePage;

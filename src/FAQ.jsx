@@ -4,7 +4,7 @@ import { Plus } from "lucide-react";
 import faqContent from "./data/faq.json";
 import { Navbar } from "./Componets/Navbar";
 import Footer from "./Componets/Footer";
-
+import PageMeta from "./Componets/PageMeta";
 
 const FAQ = ({ title = "Frequently Asked Questions"
   , subtitle = "", className = "" }) => {
@@ -14,6 +14,7 @@ const FAQ = ({ title = "Frequently Asked Questions"
 
   return (
     <>
+    <PageMeta title="FAQ – Kodecarft" favicon="/favicon.png" />
     <div className="bg-black min-h-screen flex flex-col">
   <section className={`flex-grow relative overflow-hidden  px-4 sm:px-6 md:px-12  text-white ${className}`}>
     <div className="max-w-6xl mx-auto">

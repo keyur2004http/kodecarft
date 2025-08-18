@@ -21,7 +21,7 @@ function SeoMeta({
       <meta property="og:image" content={image} />
 
       {/* Favicon */}
-      <link rel="icon" href="/favicon.png" />
+      <link rel="icon" href="/favicon.ico" />
     </Helmet>
   );
 }

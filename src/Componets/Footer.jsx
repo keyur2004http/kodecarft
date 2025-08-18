@@ -2,6 +2,7 @@
 import React from 'react';
 import { motion } from 'framer-motion';
 import { Linkedin, Instagram, Twitter, Mail } from 'lucide-react'; // Social media and contact icons
+import { FaWhatsapp } from "react-icons/fa" // ✅ WhatsApp from react-icons
 
 
 const Footer = () => {
@@ -75,16 +76,16 @@ const Footer = () => {
         <motion.nav variants={itemVariants} className="mb-10">
           <ul className="flex flex-wrap justify-center gap-x-8 gap-y-4 text-base font-medium">
             <motion.li variants={itemVariants}>
-              <a href="#services" className="hover:text-purple-600 dark:hover:text-purple-400 transition-colors">Services</a>
+              <a href="/services" className="hover:text-purple-600 dark:hover:text-purple-400 transition-colors">Services</a>
             </motion.li>
             <motion.li variants={itemVariants}>
-              <a href="#portfolio" className="hover:text-purple-600 dark:hover:text-purple-400 transition-colors">Portfolio</a>
+              <a href="/portfolio" className="hover:text-purple-600 dark:hover:text-purple-400 transition-colors">Portfolio</a>
             </motion.li>
             <motion.li variants={itemVariants}>
               <a href="#testimonials" className="hover:text-purple-600 dark:hover:text-purple-400 transition-colors">Testimonials</a>
             </motion.li>
             <motion.li variants={itemVariants}>
-              <a href="#contact" className="hover:text-purple-600 dark:hover:text-purple-400 transition-colors">Contact</a>
+              <a href="/contact" className="hover:text-purple-600 dark:hover:text-purple-400 transition-colors">Contact</a>
             </motion.li>
           </ul>
         </motion.nav>
@@ -92,7 +93,7 @@ const Footer = () => {
         {/* Social Media Links */}
         <motion.div variants={itemVariants} className="flex justify-center space-x-6 mb-10">
           <motion.a
-            href="#"
+            href="https://www.linkedin.com/company/kodecaft/about/?viewAsMember=true"
             target="_blank"
             rel="noopener noreferrer"
             variants={socialIconVariants}
@@ -103,7 +104,7 @@ const Footer = () => {
             <Linkedin size={28} />
           </motion.a>
           <motion.a
-            href="#"
+            href="https://www.instagram.com/kodecarft/"
             target="_blank"
             rel="noopener noreferrer"
             variants={socialIconVariants}
@@ -113,19 +114,21 @@ const Footer = () => {
           >
             <Instagram size={28} />
           </motion.a>
+          
           <motion.a
-            href="#"
-            target="_blank"
-            rel="noopener noreferrer"
-            variants={socialIconVariants}
-            whileHover="hover"
-            custom={{ '--hover-color': '#EC4899' }} // Pink-500
-            className="text-gray-700 dark:text-gray-300"
-          >
-            <Twitter size={28} />
-          </motion.a>
+  href="https://wa.me/917383084925" // Replace with client WhatsApp number
+  target="_blank"
+  rel="noopener noreferrer"
+  variants={socialIconVariants}
+  whileHover="hover"
+  custom={{ '--hover-color': '#25D366' }} // WhatsApp green
+  className="text-gray-700 dark:text-gray-300"
+>
+  <FaWhatsapp size={28} />
+</motion.a>
+          
           <motion.a
-            href="mailto:your_email@kinfinity.com"
+            href="mailto:kodecarft@gmail.com"
             variants={socialIconVariants}
             whileHover="hover"
             custom={{ '--hover-color': '#A78BFA' }} // Purple-400

@@ -35,8 +35,8 @@ collections:
       - { label: "ID", name: "id", widget: "number" }
       - { label: "Title", name: "title", widget: "string" }
       - { label: "Description", name: "description", widget: "text" }
-      - { label: "Main Image URL", name: "imageUrl", widget: "string" }
-      - { label: "Secondary Image URL", name: "imageUrl2", widget: "string" }
+      - { label: "Main Image URL", name: "imageUrl", widget: "image" }
+      - { label: "Secondary Image URL", name: "imageUrl2", widget: "image" }
       - { label: "Live Link", name: "link", widget: "string" }
       - label: "Tags"
         name: "tags"

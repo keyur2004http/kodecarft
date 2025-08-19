@@ -87,7 +87,7 @@ const PortfolioSection = () => {
               transition={{ duration: 0.6, delay: 0.3 }}
               viewport={{ once: true }}>
               {/* Back Image */}
-              <div className="rotate-[1deg] md:rotate-[-4deg] lg:rotate-[-4deg] w-[300px] md:w-[340px] lg:w-[360px] overflow-hidden rounded-2xl shadow-2xl border border-white/10">
+              <div className="rotate-[1deg] md:rotate-[-4deg] lg:rotate-[-7deg] w-[300px] md:w-[340px] lg:w-[360px] mt-5 overflow-hidden rounded-2xl shadow-2xl border border-white/10">
                 <img
                   src={project.imageUrl2}
                   alt="Second Screen"
@@ -96,7 +96,7 @@ const PortfolioSection = () => {
               </div>
 
               {/* Front Image */}
-              <div className="absolute left-[40%] md:left-[45%] lg:left-[50%] -translate-y-1/2 top-1/2 w-[300px] md:w-[340px] lg:w-[360px] rotate-[2deg] overflow-hidden rounded-2xl shadow-2xl border border-white/10 z-10">
+              <div className="absolute left-[40%] md:left-[45%] lg:left-[50%] -translate-y-1/2 top-1/2 w-[300px] md:w-[340px] lg:w-[360px] rotate-[-7deg] mt-2 overflow-hidden rounded-2xl shadow-2xl border border-white/10 z-10">
                 <img
                   src={project.imageUrl}
                   alt="Main Screen"

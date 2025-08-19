@@ -82,7 +82,7 @@ const Footer = () => {
               <a href="/#portfolio" className="hover:text-purple-600 dark:hover:text-purple-400 transition-colors">Portfolio</a>
             </motion.li>
             <motion.li variants={itemVariants}>
-              <a href="/#testimonials" className="hover:text-purple-600 dark:hover:text-purple-400 transition-colors">Testimonials</a>
+              <a href="#testimonials" className="hover:text-purple-600 dark:hover:text-purple-400 transition-colors">Testimonials</a>
             </motion.li>
             <motion.li variants={itemVariants}>
               <a href="/contact" className="hover:text-purple-600 dark:hover:text-purple-400 transition-colors">Contact</a>
@@ -149,3 +149,4 @@ const Footer = () => {
 };
 
 export default Footer;
+

@@ -30,6 +30,11 @@ export function Squares({
       numSquaresX.current = Math.ceil(canvas.width / squareSize) + 1;
       numSquaresY.current = Math.ceil(canvas.height / squareSize) + 1;
     };
+    const runResize = () => {
+      resizeCanvas();
+      // run again after paint to fix initial wrong size
+      requestAnimationFrame(resizeCanvas);
+    };
 
     const drawGrid = () => {
       ctx.clearRect(0, 0, canvas.width, canvas.height);
@@ -132,6 +137,7 @@ export function Squares({
     };
 
     window.addEventListener("resize", resizeCanvas);
+    runResize(); 
     canvas.addEventListener("mousemove", handleMouseMove);
     canvas.addEventListener("mouseleave", handleMouseLeave);
 

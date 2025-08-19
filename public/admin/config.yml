@@ -24,8 +24,6 @@ collections:
     format: "json"
     create: true
     delete: true
-    media_folder: "public/Assets/uploads"
-    public_folder: "/Assets/uploads"
     fields:
     - label: "Projects"
       name: "projects"

@@ -12,19 +12,6 @@
         "Live Client Project"
       ],
       "slug": "infinity"
-    },
-    {
-      "id": 2,
-      "title": " E-commerce Site",
-      "description": "A clean and modern online store built with a custom design system and headless CMS.",
-      "imageUrl": "/Assets/portfolio/first_page.jpeg",
-      "imageUrl2": "/Assets/portfolio/second_side.jpeg",
-      "link": "www.livelink.com",
-      "tags": [
-        "Full Stack ",
-        "E-Commerce"
-      ],
-      "slug": "md-fashion"
     }
   ]
 }

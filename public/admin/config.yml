@@ -36,6 +36,7 @@ collections:
       - { label: "Main Image URL", name: "imageUrl", widget: "image" }
       - { label: "Secondary Image URL", name: "imageUrl2", widget: "image" }
       - { label: "Live Link", name: "link", widget: "string" }
+      - { label: "Live", name: "live", widget: "boolean", default: true }
       - label: "Tags"
         name: "tags"
         widget: "list"

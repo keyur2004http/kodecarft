@@ -9,14 +9,14 @@
         "UX/UI Design",
         "Live Client Project"
       ],
-      "link": "https://infinityglobaltechnologies.com/",
+      "link": "https://infinityglobaltechnologies.com/#/",
       "id": 1,
       "description": "A professional multi-page website for a real client",
       "imageUrl2": "/Assets/portfolio/first_page.jpeg"
     },
     {
       "slug": "md-fashion",
-      "live": false,
+      "live": true,
       "imageUrl": "/Assets/uploads/md-second-page.jpeg",
       "title": " E-commerce Site",
       "tags": [

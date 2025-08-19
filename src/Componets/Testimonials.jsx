@@ -193,7 +193,7 @@ export default function App() {
   const sampleTestimonials = testimonialsData.testimonials;
   return (
 
-    <div className="min-h-screen bg-gradient-to-b from-bg-[#0e0e12] via-black to-white/10 py-20 px-4">
+    <div id="testimonials" className="min-h-screen bg-gradient-to-b from-bg-[#0e0e12] via-black to-white/10 py-20 px-4">
       <div className="text-center mb-16">
         <h2 className="text-4xl md:text-5xl font-bold mb-4 bg-gradient-to-b from-white to-grey-100 bg-clip-text text-transparent">
           Client Review
@@ -208,3 +208,4 @@ export default function App() {
 
   );
 }
+

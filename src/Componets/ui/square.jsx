@@ -141,7 +141,6 @@ export function Squares({
     canvas.addEventListener("mousemove", handleMouseMove);
     canvas.addEventListener("mouseleave", handleMouseLeave);
 
-    resizeCanvas();
     requestRef.current = requestAnimationFrame(updateAnimation);
 
     return () => {

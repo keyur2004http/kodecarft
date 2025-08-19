@@ -70,12 +70,22 @@ const PortfolioSection = () => {
                   </button>
                 )}
 
-                <button
-                  onClick={() => window.open(project.url, "_blank")}
-                  className="px-4 py-1.5 text-sm sm:px-5 sm:py-2 sm:text-base border border-white rounded-full font-semibold hover:bg-white hover:text-black transition"
-                >
-                  Visit Website
-                </button>
+{project.live ? (
+  <button
+    onClick={() => window.open(project.link, "_blank")}
+    className="px-4 py-1.5 text-sm sm:px-5 sm:py-2 sm:text-base border border-white rounded-full font-semibold hover:bg-white hover:text-black transition"
+  >
+    Visit Website
+  </button>
+) : (
+  <button
+    disabled
+    className="px-4 py-1.5 text-sm sm:px-5 sm:py-2 sm:text-base border border-white rounded-full font-semibold hover:bg-white hover:text-black transition"
+  >
+    Launching Soon
+  </button>
+)}
+
 
               </div>
             </motion.div>

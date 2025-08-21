@@ -16,7 +16,7 @@ const HomePage = () => {
        <SeoMeta
         title="HomePage – Kodecarft"
         description="Explore our web design, branding, and digital marketing services crafted for startups and growing businesses."
-        url="https://www.kodecarft.com/services"
+        url="https://kodecarft.netlify.app/"
         image="./Assets/logo/openGraph.png"
       />
         <div className=" bg-black text-gray-900 dark:text-white">
@@ -35,4 +35,5 @@ const HomePage = () => {
         </>
     );
 };
+
 export default HomePage;

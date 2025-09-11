@@ -1,0 +1,34 @@
+{
+  "services": [
+    {
+      "icon": "Brush",
+      "title": "Custom Web Design",
+      "description": "Crafting unique, responsive websites tailored to your brand's vision and business goals."
+    },
+    {
+      "icon": "Smartphone",
+      "title": "Responsive Development",
+      "description": "Ensuring your website looks and functions perfectly on all devices, from desktops to smartphones."
+    },
+    {
+      "icon": "Search",
+      "title": "SEO Optimization",
+      "description": "Websites meticulously optimized for search engine visibility to help your business grow online organically."
+    },
+    {
+      "icon": "CodeXml",
+      "title": "Clean Code Development",
+      "description": "Building robust and maintainable websites with clean, efficient, and well-documented code practices."
+    },
+    {
+      "icon": "LayoutTemplate",
+      "title": "Easily Manageable Website",
+      "description": "We build websites that are simple to update and maintain, so you can change content anytime without technical knowledge."
+    },
+    {
+      "icon": "Globe",
+      "title": "Website Launch & Support",
+      "description": "Providing seamless website deployment, ongoing maintenance, and dedicated technical support."
+    }
+  ]
+}

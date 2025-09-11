@@ -1,0 +1,107 @@
+[
+{
+    "slug": "infinty",
+    "title": "Marketing Agency Website ",
+    "description": "A deep dive into how we built a high-performing, professional online presence for a real marketing agency.",
+    "screenshots": [
+      { "src": "/Assets/case-study/home.png", "alt": "Homepage" },
+      { "src": "/Assets/case-study/product.png", "alt": "Portfolio" },
+      { "src": "/Assets/case-study/portfolio.png", "alt": "Portfolio" },
+      { "src": "/Assets/case-study/portfolio-product.png", "alt": "Portfolio-Product" },
+      { "src": "/Assets/case-study/service.png", "alt": "Services Page" },
+      { "src": "/Assets/case-study/service.png", "alt": "Services Page" }
+    ],"technologies": [
+      {
+        "name": "HTML5",
+        "icon": "FaHtml5"
+      },
+      {
+        "name": "Tailwind",
+        "icon": "FaCss3Alt"
+      },
+      {
+        "name": "JavaScript",
+        "icon": "FaJs"
+      }
+    ],    
+    "goals": [
+      "Establish a trustworthy and professional online presence",
+      "Generate leads through direct contact options like WhatsApp and email",
+      "Showcase products and services in a clean, easy-to-navigate layout"
+    ],
+    "solutions": [
+      "Custom multi-page design tailored to client’s budget",
+      "Fast-loading, mobile-responsive layout with minimal classic design",
+      "Integrated email form, WhatsApp link, and full social media connectivity"
+    ],
+    
+    
+    "results": [
+      {
+        "icon": "Rocket",
+        "title": "Performance",
+        "desc": "90+ Lighthouse scores on all pages."
+      },
+      {
+        "icon": "BarChart3",
+        "title": "Conversion",
+        "desc": "Boosted form submissions by 40% in 2 months."
+      },
+      {
+        "icon": "Briefcase",
+        "title": "Credibility",
+        "desc": "Professional look helped close deals faster."
+      }
+    ],
+    "cta": {
+      "text": "Want a Website Like This?",
+      "buttonText": "Let’s Work Together",
+      "link": "/contact"
+    }
+  },
+    {
+        "slug": "sidhharth",
+        "title": "Agency Website Case Study",
+        "description": "A deep dive into how we built a high-performing, professional online presence for a real marketing agency.",
+        "screenshots": [
+          { "src": "/case-study/homepage.png", "alt": "Homepage" },
+          { "src": "/case-study/about.png", "alt": "About Page" },
+          { "src": "/case-study/services.png", "alt": "Services Page" }
+        ],
+        "goals": [
+          "Build brand trust and authority online",
+          "Increase lead generation through clear CTAs",
+          "Display services and projects effectively"
+        ],
+        "solutions": [
+          "Custom multi-page design with SEO optimization",
+          "Fast loading and mobile-friendly layout",
+          "Integrated blog and project case studies"
+        ],
+        "results": [
+          {
+            "icon": "Rocket",
+            "title": "Performance",
+            "desc": "90+ Lighthouse scores on all pages."
+          },
+          {
+            "icon": "BarChart3",
+            "title": "Conversion",
+            "desc": "Boosted form submissions by 40% in 2 months."
+          },
+          {
+            "icon": "Briefcase",
+            "title": "Credibility",
+            "desc": "Professional look helped close deals faster."
+          }
+        ],
+        "cta": {
+          "text": "Want a Website Like This?",
+          "buttonText": "Let’s Work Together",
+          "link": "/contact"
+        }
+      }
+    ]
+      
+
+

@@ -1,0 +1,195 @@
+backend:
+  name: git-gateway
+  branch: main
+  repo: keyur2004http/kodecarft
+  squash_merges: true
+  commit_messages:
+    create: "Create {{collection}} “{{slug}}”"
+    update: "Update {{collection}} “{{slug}}”"
+    delete: "Delete {{collection}} “{{slug}}”"
+
+media_folder: "public/Assets/uploads"
+public_folder: "/Assets/uploads"
+
+site_url: https://kodecarft.netlify.app/
+display_url: https://kodecarft.netlify.app/
+
+collections:
+- name: "portfolio"
+  label: "Portfolio Projects"
+  files:
+  - name: "portfolio"
+    label: "Portfolio List"
+    file: "src/data/portfolio.json"
+    format: "json"
+    create: true
+    delete: true
+    fields:
+    - label: "Projects"
+      name: "projects"
+      widget: "list"
+      allow_add: true
+      fields:
+      - { label: "ID", name: "id", widget: "number" }
+      - { label: "Title", name: "title", widget: "string" }
+      - { label: "Description", name: "description", widget: "text" }
+      - { label: "Main Image URL", name: "imageUrl", widget: "image" }
+      - { label: "Secondary Image URL", name: "imageUrl2", widget: "image" }
+      - { label: "Live Link", name: "link", widget: "string" }
+      - { label: "Live", name: "live", widget: "boolean", default: true }
+      - label: "Tags"
+        name: "tags"
+        widget: "list"
+        allow_add: true
+        field: { label: "Tag", name: "tag", widget: "string" }
+      - { label: "Slug", name: "slug", widget: "string" }
+
+- name: "services"
+  label: "Services"
+  files:
+  - name: "services"
+    label: "Service List"
+    file: "src/data/services.json"
+    format: "json"
+    create: true
+    delete: true
+    fields:
+    - label: "Services"
+      name: "services"
+      widget: "list"
+      allow_add: true
+      fields:
+      - { label: "Icon Name", name: "icon", widget: "select", options: [ "Brush", "Smartphone", "Search", "CodeXml", "LayoutTemplate", "Globe" ] }
+      - { label: "Title", name: "title", widget: "string" }
+      - { label: "Description", name: "description", widget: "text" }
+
+- name: "testimonials"
+  label: "Client Testimonials"
+  files:
+  - name: "testimonials"
+    label: "Testimonials List"
+    file: "src/data/testimonials.json"
+    format: "json"
+    create: true
+    delete: true
+    media_folder: "public/Assets/testimonials"
+    public_folder: "/Assets/testimonials"
+    fields:
+    - label: "Testimonial Entries"
+      name: "testimonials"
+      widget: "list"
+      allow_add: true
+      fields:
+      - { label: "Quote", name: "quote", widget: "text" }
+      - { label: "Name", name: "name", widget: "string" }
+      - { label: "Designation", name: "designation", widget: "string" }
+      - { label: "Image", name: "src", widget: "image" }
+
+- name: "case-studies"
+  label: "Case Studies"
+  label_singular: "Case Study"
+  folder: "public/data"
+  create: true
+  delete: true
+  extension: "json"
+  format: "json"
+  identifier_field: "slug"
+  media_folder: "/public/assets/case-study"
+  public_folder: "/assets/case-study"
+  fields:
+  - { label: "Slug", name: "slug", widget: "string" }
+  - { label: "Title", name: "title", widget: "string" }
+  - { label: "Description", name: "description", widget: "text" }
+  - label: "Screenshots"
+    name: "screenshots"
+    widget: "list"
+    allow_add: true
+    fields:
+    - { label: "Image", name: "src", widget: "image" }
+    - { label: "Alt Text", name: "alt", widget: "string" }
+  - label: "Goals"
+    name: "goals"
+    widget: "list"
+    allow_add: true
+    field: { label: "Goal", name: "goal", widget: "string" }
+  - label: "Solutions"
+    name: "solutions"
+    widget: "list"
+    allow_add: true
+    field: { label: "Solution", name: "solution", widget: "string" }
+  - label: "Results"
+    name: "results"
+    widget: "list"
+    allow_add: true
+    fields:
+    - { label: "Icon", name: "icon", widget: "string" }
+    - { label: "Title", name: "title", widget: "string" }
+    - { label: "Description", name: "desc", widget: "text" }
+  - label: "Technologies"
+    name: "technologies"
+    widget: "list"
+    allow_add: true
+    fields:
+    # <--- Corrected indentation here!
+    - { label: "Name", name: "name", widget: "string" }
+    - label: "Icon"
+      name: "icon"
+      widget: "select"
+      options:
+      - { label: "HTML5", value: "FaHtml5" }
+      - { label: "CSS3", value: "FaCss3Alt" }
+      - { label: "JavaScript", value: "FaJs" }
+      - { label: "WordPress", value: "FaWordpress" }
+      - { label: "React", value: "FaReact" }
+      - { label: "Figma", value: "FaFigma" }
+      - { label: "Node.js", value: "FaNodeJs" }
+      - { label: "Shopify", value: "FaShopify" }
+  - label: "Call To Action"
+    name: "cta"
+    widget: "object"
+    fields:
+    - { label: "Text", name: "text", widget: "string" }
+    - { label: "Button Text", name: "buttonText", widget: "string" }
+    - { label: "Link", name: "link", widget: "string" }
+- name: "faq"
+  label: "FAQ Section"
+  files:
+  - name: "faq"
+    label: "FAQ"
+    file: "src/data/faq.json"
+    format: "json"
+    create: true
+    delete: false
+    fields:
+    - label: "Categories"
+      name: "categories"
+      widget: "object"
+      fields:
+      - { label: "General", name: "general", widget: "string" }
+      - { label: "Design", name: "design", widget: "string" }
+      - { label: "Development", name: "development", widget: "string" }
+    - label: "FAQ Data"
+      name: "faqData"
+      widget: "object"
+      fields:
+      - label: "General Questions" # Added a more descriptive label
+        name: "general"
+        widget: "list"
+        allow_add: true
+        fields:
+        - { label: "Question", name: "question", widget: "string" }
+        - { label: "Answer", name: "answer", widget: "text" }
+      - label: "Design Questions" # Added a more descriptive label
+        name: "design"
+        widget: "list"
+        allow_add: true
+        fields:
+        - { label: "Question", name: "question", widget: "string" }
+        - { label: "Answer", name: "answer", widget: "text" }
+      - label: "Development Questions" # Added a more descriptive label
+        name: "development"
+        widget: "list"
+        allow_add: true
+        fields:
+        - { label: "Question", name: "question", widget: "string" }
+        - { label: "Answer", name: "answer", widget: "text" }

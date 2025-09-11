@@ -1,0 +1,32 @@
+{
+  "projects": [
+    {
+      "slug": "infinity",
+      "live": true,
+      "imageUrl": "/Assets/portfolio/second_page.jpeg",
+      "title": "Marketing Agency Site",
+      "tags": [
+        "UX/UI Design",
+        "Live Client Project"
+      ],
+      "link": "https://infinityglobaltechnologies.com/#/",
+      "id": 1,
+      "description": "A professional multi-page website for a real client",
+      "imageUrl2": "/Assets/portfolio/first_page.jpeg"
+    },
+    {
+      "slug": "md-fashion",
+      "live": false,
+      "imageUrl": "/Assets/uploads/md-second-page.jpeg",
+      "title": " E-commerce Site",
+      "tags": [
+        " E-commerce ",
+        "Full Stack"
+      ],
+      "link": "www.icon.com",
+      "id": 2,
+      "description": "A clean and modern online store built with a custom design system and headless CMS.",
+      "imageUrl2": "/Assets/uploads/md-first_page.jpeg"
+    }
+  ]
+}

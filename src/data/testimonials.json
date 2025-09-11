@@ -1,0 +1,18 @@
+ 
+{
+  "testimonials": [
+    {
+      "quote": "We are fully satisfied with the website delivered by the team. It not only reflects our brand perfectly but was also completed within our budget.",
+      "name": "Satyam Lathiya",
+      "designation": "CEO, Infinity global Tech.",
+      "src": "/Assets/testimonials/person-review-2.png"
+    },
+    {
+      "quote": "Professional website delivered quickly, exactly as I wanted. Very satisfied!,Clean, modern design and easy to use. Highly recommend their service!",
+      "name": "Mr.Bhaveshbhai",
+      "designation": "Founder, Mahaddev Fashion.",
+      "src": "/Assets/testimonials/person-review.png"
+    }
+    
+  ]
+}

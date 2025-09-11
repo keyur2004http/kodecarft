@@ -1,0 +1,65 @@
+{
+    "categories": {
+      "general": "General",
+      "design": "Design",
+      "development": "Development"
+    },
+    "faqData": {
+      "general": [
+        {
+          "question": "What services do you offer?",
+          "answer": "We offer website design, development, SEO, and more."
+        },
+        
+          {
+            "question": "How much do websites cost?",
+"answer": "Websites can vary in price based on a multitude of factors. We offer affordable solutions for startups that include all the essential features you need, without compromising on quality.\nFor larger companies, we also provide high-end, customized options that offer advanced features and top-tier performance.\nNo matter your size or budget, we’re here to create a website that fits your needs and supports your growth.\nBook a call to discuss your business needs, and we’ll provide you with a price range."
+
+          },
+          {
+            "question": "What if I don't like my site?",
+            "answer": "We offer revisions during the design phase to ensure you’re happy. Your satisfaction is our priority."
+          },
+          {
+            "question": "How does payment work?",
+            "answer": "We take a 50% advance to start the project, and the remaining 50% upon completion and approval."
+          }
+      
+        
+
+      ],
+      "design": [
+        {
+          "question": "Can I provide my own design?",
+          "answer": "Yes, we can work with your design or create one for you."
+        },
+          {
+            "question": "Can you match my brand colors and style?",
+            "answer": "Yes, we customize every design to align perfectly with your brand’s identity and color scheme."
+          },
+          {
+            "question": "Do I get to see design drafts before the final version?",
+            "answer": "Absolutely! We share mockups and gather your feedback before finalizing the design."
+          },
+          {
+            "question": "Is the website design mobile-friendly?",
+            "answer": "Yes, all our designs are fully responsive and optimized for mobile, tablet, and desktop devices."
+          }
+      ],
+      "development": [
+        {
+          "question": "Do you build e-commerce sites?",
+          "answer": "Yes, we specialize in building fully functional online stores."
+        },
+        {
+          "question": "Can I update the website myself after it's built?",
+          "answer": "Yes, we can integrate an admin panel or CMS so you can easily edit content on your own."
+        },
+        {
+          "question": "Is the website SEO-friendly?",
+          "answer": "Absolutely! We follow SEO best practices to help your site rank better on search engines."
+        }
+      ]
+    }
+  }
+  

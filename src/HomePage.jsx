@@ -6,8 +6,6 @@ import { HeroSection } from "./Componets/animated-hero";
 import CallToAction from "./CTA";
 import WebsiteAnalysis from "./Componets/analysis";
 import SeoMeta from "./Componets/SeoMeta";
-
-
 const HomePage = () => {
     return (
         <>
@@ -18,17 +16,12 @@ const HomePage = () => {
         image="./Assets/logo/openGraph.png"
       />
         <div className=" bg-black text-gray-900 dark:text-white">
-            
             <HeroSection></HeroSection>
-           
             <Services></Services>
             <PortfolioSection></PortfolioSection>
-            {/* <AnimatedTestimonials></AnimatedTestimonials> */}
             <CallToAction></CallToAction>
             <WebsiteAnalysis></WebsiteAnalysis>
-            
             <Footer></Footer>
-            
         </div>
         </>
     );

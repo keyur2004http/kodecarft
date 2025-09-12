@@ -4,11 +4,9 @@ import PortfolioSection from "./Componets/PortfolioSection";
 import Footer from "./Componets/Footer";
 import { HeroSection } from "./Componets/animated-hero";
 import CallToAction from "./CTA";
-import AnimatedTestimonials from "./Componets/Testimonials";
 import WebsiteAnalysis from "./Componets/analysis";
-import Loader from "./Componets/ui/Loader";
-import PageMeta from "./Componets/PageMeta";
 import SeoMeta from "./Componets/SeoMeta";
+
 
 const HomePage = () => {
     return (
@@ -25,10 +23,10 @@ const HomePage = () => {
            
             <Services></Services>
             <PortfolioSection></PortfolioSection>
-            <AnimatedTestimonials></AnimatedTestimonials>
+            {/* <AnimatedTestimonials></AnimatedTestimonials> */}
             <CallToAction></CallToAction>
             <WebsiteAnalysis></WebsiteAnalysis>
-           
+            
             <Footer></Footer>
             
         </div>

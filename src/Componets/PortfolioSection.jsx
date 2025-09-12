@@ -19,7 +19,6 @@ const PortfolioSection = () => {
       </div>
       <div className="space-y-10 relative transperate ">
         {projects.map((project) => (
-
           <motion.div
             key={project.id}
             className="relative grid md:grid-cols-2 items-center gap-10 p-0 rounded-2xl border border-neutral-700 bg-white/5 shadow-xl backdrop-blur-md overflow-hidden"

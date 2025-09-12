@@ -42,7 +42,7 @@ function HeroSection() {
       text-white "
     >
       {/* Navbar */}
-      <div className="flex justify-center w-full mb-16">
+      <motion.div className="flex justify-center w-full mb-16">
         <div className="flex justify-center w-full mb-4">
           <Navbar
             navItems={[
@@ -53,7 +53,7 @@ function HeroSection() {
             ]}
           />
         </div>
-      </div>
+      </motion.div>
 
       <div className="w-full overflow-hidden">
         <div className="container mx-auto">
@@ -64,7 +64,6 @@ function HeroSection() {
             >
               Get Free Website Analysis →
             </a>
-
             {/* Title */}
             <div className="flex gap-4 flex-col">
               <h1 className="text-5xl md:text-7xl max-w-2xl tracking-tighter text-center font-regular">

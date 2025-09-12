@@ -8,7 +8,7 @@ import HomePage from './HomePage';
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import CaseStudyPage from './Componets/Case';
 import netlifyIdentity from 'netlify-identity-widget';
-import Loader from './Componets/ui/Loader';
+
 
 function App() {
   useEffect(() => {

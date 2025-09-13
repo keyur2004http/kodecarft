@@ -16,7 +16,7 @@
     },
     {
       "slug": "md-fashion",
-      "live": false,
+      "live": true,
       "imageUrl": "/Assets/uploads/md-second-page.jpeg",
       "title": " E-commerce Site",
       "tags": [

@@ -19,7 +19,7 @@ export const Navbar = ({ navItems = [] }) => {
               className="w-10 h-10  rounded-xl object-cover"
             />
             <span className="ml-2 text-white font-semibold">
-        KodeCarft
+        KodeCraft
       </span>
           </a>
 

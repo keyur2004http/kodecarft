@@ -57,7 +57,7 @@ const Footer = () => {
     />
     <h2 className="mt-2 text-2xl font-extrabold text-gray-900 dark:text-white">
       <span className=" text-white">
-        KodeCarft
+        KodeCraft
       </span>
     </h2>
   </a>
@@ -66,7 +66,7 @@ const Footer = () => {
     Crafting Digital Experiences
   </p>
   <p className="text-sm text-gray-500 dark:text-gray-400 mt-6 max-w-xl mx-auto">
-    KodeCarft is a creative digital agency delivering tailor-made web
+    KodeCraft is a creative digital agency delivering tailor-made web
     solutions, marketing strategies, and brand experiences.
   </p>
 </motion.div>
@@ -104,7 +104,7 @@ const Footer = () => {
             <Linkedin size={28} />
           </motion.a>
           <motion.a
-            href="https://www.instagram.com/kodecarft/"
+            href="https://www.instagram.com/KodeCraft/"
             target="_blank"
             rel="noopener noreferrer"
             variants={socialIconVariants}
@@ -128,7 +128,7 @@ const Footer = () => {
 </motion.a>
           
           <motion.a
-            href="mailto:kodecarft@gmail.com"
+            href="mailto:KodeCraft@gmail.com"
             variants={socialIconVariants}
             whileHover="hover"
             custom={{ '--hover-color': '#A78BFA' }} // Purple-400
@@ -140,7 +140,7 @@ const Footer = () => {
 
         {/* Copyright */}
         <motion.p variants={itemVariants} className="text-sm text-gray-500 dark:text-gray-400">
-          &copy; {new Date().getFullYear()} KodeCarft. All rights reserved.
+          &copy; {new Date().getFullYear()} KodeCraft. All rights reserved.
         </motion.p>
       </div>
     </motion.footer>

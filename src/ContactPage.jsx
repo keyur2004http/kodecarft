@@ -31,7 +31,7 @@ useEffect(() => {
 }, [location.search]);
 
   useEffect(() => {
-    emailjs.init('lzfcEZnXskCxvGka2');
+    emailjs.init('RpWIxZYlvIQ0FkGGG');
   }, []);
 
 
@@ -71,8 +71,8 @@ useEffect(() => {
     setSubmitMessage("Sending your message...");
 
     try {
-      const serviceId = 'service_pxq42po';
-      const templateId = 'template_6ktcf44';
+      const serviceId = 'service_9xecicj';
+      const templateId = 'template_f3fq70q';
       const templateParams = {
         from_name: formData.name,
         from_email: formData.email,
@@ -113,7 +113,7 @@ useEffect(() => {
 
   return (
     <>
-      <PageMeta title="Contact – Kodecarft" favicon="/favicon.png" />
+      <PageMeta title="Contact – KodeCraft" favicon="/favicon.png" />
       <div className=" bg-black text-white ">
       <section className="relative  overflow-hidden px-0 pb-10  md:pt-4 "
       >
@@ -136,7 +136,7 @@ useEffect(() => {
           </motion.h2>
 
           <motion.p className="text-lg sm:text-xl text-white max-w-2xl mx-auto mb-16 mt-8 leading-relaxed" initial="hidden" whileInView="visible" viewport={{ once: true, amount: 0.5 }} variants={sectionVariants}>
-            Have a project in mind, a question, or just want to say hello? Reach out to KodeCarft!
+            Have a project in mind, a question, or just want to say hello? Reach out to KodeCraft!
           </motion.p>
 
           {/* GLASS CONTAINER */}
@@ -147,12 +147,12 @@ useEffect(() => {
             <motion.div className="lg:w-1/2 flex flex-col justify-center mb-10 lg:mb-0 lg:pr-8" initial="hidden" whileInView="visible" viewport={{ once: true, amount: 0.3 }} variants={contactInfoVariants}>
               <h3 className="text-3xl font-bold text-white-900  mb-6">Get in Touch</h3>
               <p className="text-white-700 text-white-500 mb-8 leading-relaxed">
-                We're excited to hear from you and discuss how KodeCarft can help bring your digital vision to life.
+                We're excited to hear from you and discuss how KodeCraft can help bring your digital vision to life.
               </p>
               <ul className="space-y-6 text-lg">
                 <li className="flex items-center">
                   <Mail className="w-7 h-7 text-purple-600 mr-4" />
-                  <a href="mailto:kodecarft@gmail.com" className="text-white-800 :text-white-600 hover:text-purple-600 :hover:text-purple-400 transition-colors">kodecarft@gmail.com</a>
+                  <a href="mailto:KodeCraft@gmail.com" className="text-white-800 :text-white-600 hover:text-purple-600 :hover:text-purple-400 transition-colors">KodeCraft@gmail.com</a>
                 </li>
                 <li className="flex items-center">
                   <Phone className="w-7 h-7 text-indigo-600 :text-indigo-400 mr-4" />

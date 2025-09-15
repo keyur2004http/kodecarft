@@ -3,6 +3,7 @@ import { motion } from "framer-motion";
 import { MoveRight } from "lucide-react";
 import { Navbar } from "./Navbar";
 import { useLocation } from "react-router-dom";
+import { SocialConnect } from "./social-link";
 
 function HeroSection() {
   const [titleNumber, setTitleNumber] = useState(0);
@@ -36,8 +37,7 @@ function HeroSection() {
 
   return (
     <section
-      className="relative min-h-screen overflow-hidden px-4 pb-12 pt-2 md:pt-4 
-      
+      className="relative min-h-screen overflow-hidden px-4 pb-12 pt-2 md:pt-4  
       bg-[radial-gradient(ellipse_60%_80%_at_50%_-20%,rgba(120,119,198,0.4),rgba(0,0,0,0))] 
       text-white "
     >
@@ -118,8 +118,9 @@ function HeroSection() {
           </div>
         </div>
       </div>
-  
-
+      <div className="absolute left-4 top-1/2 -translate-y-1/2 hidden md:flex flex-col gap-6">
+    
+  </div>
     </section>
   );
 }

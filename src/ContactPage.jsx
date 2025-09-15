@@ -195,7 +195,7 @@ useEffect(() => {
                 <motion.div variants={formItemVariants} custom={3}>
                   <label htmlFor="message" className="block text-white-700 :text-white-500 text-sm font-medium mb-2">Message</label>
                   <textarea id="message" name="message" value={formData.message} onChange={handleChange} rows="6" className={`w-full p-3 rounded-lg border bg-white/5 :bg-gray-100 text-white-900 :text-white-800 focus:ring-2 focus:ring-purple-500 ${errors.message ? 'border-red-500' : 'border-gray-200 :border-gray-300'}`} placeholder="Tell us about your project or question..."></textarea>
-                  {errors.message && <p className="text-red-500 text-xs mt-1">{errors.message}</p>}
+                  {errors.message && <p className="text-indigo-500 text-xs mt-1">{errors.message}</p>}
                 </motion.div>
 
                 {/* Submit */}

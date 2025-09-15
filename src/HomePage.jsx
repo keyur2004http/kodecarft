@@ -12,7 +12,7 @@ const HomePage = () => {
        <SeoMeta
         title="HomePage – Kodecarft"
         description="Explore our web design, branding, and digital marketing services crafted for startups and growing businesses."
-        url="https://kodecarft.netlify.app/"
+        url="https://kodecarft.studio/"
         image="./Assets/logo/openGraph.png"
       />
         <div className=" bg-black text-gray-900 dark:text-white">

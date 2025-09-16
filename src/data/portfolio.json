@@ -2,14 +2,14 @@
   "projects": [
     {
       "slug": "infinity",
-      "live": true,
+      "live": false,
       "imageUrl": "/Assets/portfolio/second_page.jpeg",
       "title": "Marketing Agency Site",
       "tags": [
-        "UX/UI Design",
-        "Live Client Project"
+        "Simple Design",
+        "Old Project"
       ],
-      "link": "https://infinityglobaltechnologies.com/#/",
+      "link": "https://resilient-frangollo-ce363e.netlify.app/#/",
       "id": 1,
       "description": "A professional multi-page website for a real client",
       "imageUrl2": "/Assets/portfolio/first_page.jpeg"
@@ -18,7 +18,7 @@
       "slug": "md-fashion",
       "live": true,
       "imageUrl": "/Assets/uploads/md-second-page.jpeg",
-      "title": " E-commerce Site",
+      "title": "Fashion Store",
       "tags": [
         " E-commerce ",
         "Online Store"
@@ -27,6 +27,20 @@
       "id": 2,
       "description": "A clean and modern online store built with a great design system and fully manageable with admin panel.",
       "imageUrl2": "/Assets/uploads/md-first_page.jpeg"
+    },
+    {
+      "slug": "Infinity Global Tech",
+      "live": true,
+      "imageUrl": "/Assets/uploads/new-infinity-about.jpeg",
+      "title": "Updated Digital Marketing Site",
+      "tags": [
+        "Live Project",
+        "Multi-Page"
+      ],
+      "link": "https://infinityglobaltechnologies.com/#/",
+      "id": 3,
+      "description": "New Version of Infinity Global Tech.Enhanced look and attractive UI",
+      "imageUrl2": "/Assets/uploads/new-infinity-home.jpeg"
     }
   ]
 }

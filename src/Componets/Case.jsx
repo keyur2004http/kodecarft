@@ -1,14 +1,13 @@
 import React  from "react";
 import { useParams } from "react-router-dom";
 import caseStudies from "../data/case-studies.json";
-import ScreenshotCarousel from "./ui/image-scroll.jsx";
 import { Navbar } from "./Navbar";
 import {
   FaHtml5, FaWordpress, FaJs, FaCss3Alt,
   FaReact,
   FaFigma,
   FaNodeJs,
-  FaShopify
+  FaShopify,FaNex
 } from "react-icons/fa";
 import {
   Rocket,
@@ -20,6 +19,8 @@ import {
 } from "lucide-react";
 import Footer from "./Footer";
 import { useEffect,useLayoutEffect } from "react";
+import CardCarousel, { ScreenshotCarousel } from "./ui/image-scroll";
+import InteractiveSelector from "./ui/image-scroll";
 
 
 const iconComponents = {
@@ -84,9 +85,10 @@ export default function CaseStudyPage() {
           <p className="text-lg text-gray-300 max-w-3xl mx-auto">{caseStudy.description}</p>
         </div>
 
-        {/* Screenshots */}
-        <div className="mt-20">
-          <ScreenshotCarousel screenshots={caseStudy.screenshots} />
+              {/* Screenshots */}
+              <div className="mt-20">
+              <InteractiveSelector screenshots={caseStudy.screenshots} />
+
         </div>
         {/* Technologies Used */}
         {caseStudy.technologies && (

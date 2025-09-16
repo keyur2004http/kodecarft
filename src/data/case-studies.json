@@ -1,15 +1,11 @@
 [
 {
-    "slug": "infinty",
+    "slug": "infity",
     "title": "Marketing Agency Website ",
     "description": "A deep dive into how we built a high-performing, professional online presence for a real marketing agency.",
     "screenshots": [
-      { "src": "/Assets/case-study/home.png", "alt": "Homepage" },
-      { "src": "/Assets/case-study/product.png", "alt": "Portfolio" },
-      { "src": "/Assets/case-study/portfolio.png", "alt": "Portfolio" },
-      { "src": "/Assets/case-study/portfolio-product.png", "alt": "Portfolio-Product" },
-      { "src": "/Assets/case-study/service.png", "alt": "Services Page" },
-      { "src": "/Assets/case-study/service.png", "alt": "Services Page" }
+      { "src": "/Assets/case-study/portfolio.png", "alt": "Homepage" },
+      { "src": "./Assets/case-study/first-hero", "alt": "Portfolio" }
     ],"technologies": [
       {
         "name": "HTML5",
@@ -36,11 +32,6 @@
     ],   
     "results": [
       {
-        "icon": "Rocket",
-        "title": "Performance",
-        "desc": "90+ Lighthouse scores on all pages."
-      },
-      {
         "icon": "BarChart3",
         "title": "Conversion",
         "desc": "Boosted form submissions by 40% in 2 months."
@@ -62,7 +53,7 @@
         "title": "Agency Website Case Study",
         "description": "A deep dive into how we built a high-performing, professional online presence for a real marketing agency.",
         "screenshots": [
-          { "src": "/case-study/homepage.png", "alt": "Homepage" },
+          { "src": "/case-study/homepage.jpeg", "alt": "Homepage" },
           { "src": "/case-study/about.png", "alt": "About Page" },
           { "src": "/case-study/services.png", "alt": "Services Page" }
         ],

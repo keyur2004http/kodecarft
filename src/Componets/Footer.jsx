@@ -51,7 +51,7 @@ const Footer = () => {
   {/* Logo + Text Wrapper */}
   <a href="/" className="flex flex-col items-center">
     <img
-      src="/Assets/logo/Kode-carft-studio.png"
+      src="/Assets/logo/Kode-studio-footer.png"
       alt="Icon"
       className="w-20 h-20 rounded-xl object-cover "
     />
@@ -128,7 +128,7 @@ const Footer = () => {
 </motion.a>
           
           <motion.a
-            href="mailto:KodeCraft@gmail.com"
+            href="mailto:hello.kodecraft@gmail.com"
             variants={socialIconVariants}
             whileHover="hover"
             custom={{ '--hover-color': '#A78BFA' }} // Purple-400

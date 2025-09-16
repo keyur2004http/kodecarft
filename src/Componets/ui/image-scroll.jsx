@@ -1,87 +1,65 @@
-import React, { useEffect, useState } from "react";
-import { ChevronLeft, ChevronRight } from "lucide-react";
+import React, { useState, useEffect } from "react";
 
-const ScreenshotCarousel = ({ screenshots }) => {
-  const [index, setIndex] = useState(0);
-  const [imagesPerPage, setImagesPerPage] = useState(2); // Show 2 images
+const InteractiveSelector = ({ screenshots }) => {
+  const [activeIndex, setActiveIndex] = useState(0);
+  const [animatedScreenshots, setAnimatedScreenshots] = useState([]);
 
   useEffect(() => {
-    const handleResize = () => {
-      const width = window.innerWidth;
-      if (width < 640) setImagesPerPage(1);
-      else setImagesPerPage(2); 
-    };
-    handleResize();
-    window.addEventListener("resize", handleResize);
-    return () => window.removeEventListener("resize", handleResize);
-  }, []);
+    const timers = [];
+    if (screenshots && screenshots.length > 0) {
+      screenshots.forEach((_, i) => {
+        const timer = setTimeout(() => {
+          setAnimatedScreenshots((prev) => [...prev, i]);
+        }, 180 * i);
+        timers.push(timer);
+      });
+    }
+    return () => timers.forEach((timer) => clearTimeout(timer));
+  }, [screenshots]);
 
-  const totalPages = Math.ceil(screenshots.length / imagesPerPage);
-
-  const next = () => {
-    if (index < totalPages - 1) setIndex(index + 1);
-  };
-
-  const prev = () => {
-    if (index > 0) setIndex(index - 1);
-  };
-
-  const currentImages = screenshots.slice(
-    index * imagesPerPage,
-    index * imagesPerPage + imagesPerPage
-  );
+  if (!screenshots || screenshots.length === 0) {
+    return <div>No screenshots to display.</div>;
+  }
 
   return (
-    <div className="relative w-full max-w-5xl mx-auto py-10 px-4">
-      {/* Arrows */}
+    <div className="flex w-full max-w-5xl h-auto mx-auto items-stretch overflow-hidden relative gap-2 px-2">
+      {screenshots.map((s, index) => {
+        const src = s.src;
+        const alt = s.alt || `screenshot-${index}`;
 
-
-      {/* Image Display */}
-      <div className="flex justify-center gap-6">
-        {currentImages.map((img, i) => (
+        return (
           <div
-            key={i}
-            className="w-full sm:w-1/2 flex items-center justify-center"
+            key={index}
+            className={`
+              relative flex transition-all duration-700 ease-in-out cursor-pointer
+              ${activeIndex === index ? "active" : ""}
+            `}
+            style={{
+              opacity: animatedScreenshots.includes(index) ? 1 : 0,
+              transform: animatedScreenshots.includes(index)
+                ? "translateX(0)"
+                : "translateX(-40px)",
+              flex: activeIndex === index ? "4 1 0%" : "1 1 0%",
+              zIndex: activeIndex === index ? 10 : 1,
+            }}
+            onClick={() => setActiveIndex(index)}
           >
             <img
-              src={img.src}
-              alt={img.alt}
-              className="w-full h-auto max-h-[400px] object-contain rounded-xl shadow"
+              src={src}
+              alt={alt}
+              className={`rounded-lg shadow-lg transition-all duration-700 ease-in-out object-cover
+                ${activeIndex === index ? "w-full" : "w-[100px]"}
+              `}
+              style={{
+                maxHeight: "450px", // limit height
+                width: activeIndex === index ? "100%" : "100px",
+              }}
             />
           </div>
-        ))}
-      </div>
-
-      {/* Dots */}
-      <div className="flex justify-center gap-2 mt-4">
-        {Array.from({ length: totalPages }).map((_, i) => (
-          <span
-            key={i}
-            className={`w-2 h-2 rounded-full ${i === index ? "bg-indigo-500" : "bg-gray-300"
-              }`}
-          ></span>
-        ))}
-      </div>
-      <div className="flex justify-center gap-4 mt-10">
-      <button
-        onClick={prev}
-        disabled={index === 0}
-        className="h-10 w-10 rounded-full bg-white/10 hover:bg-white/20 text-white flex items-center justify-center group/button shadow-md transition-colors duration-300 transform hover:scale-105"
-      >
-        <ChevronLeft />
-      </button>
-
-      <button
-        onClick={next}
-        disabled={index === totalPages - 1}
-        className=" h-10 w-10 rounded-full bg-white/10 hover:bg-white/20 text-white flex items-center justify-center group/button shadow-md transition-colors duration-300 transform hover:scale-105"
-      >
-        <ChevronRight />
-      </button>
-      </div>
-
+        );
+      })}
     </div>
   );
 };
 
-export default ScreenshotCarousel;
+export default InteractiveSelector;

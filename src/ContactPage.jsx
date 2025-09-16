@@ -152,7 +152,7 @@ useEffect(() => {
               <ul className="space-y-6 text-lg">
                 <li className="flex items-center">
                   <Mail className="w-7 h-7 text-purple-600 mr-4" />
-                  <a href="mailto:KodeCraft@gmail.com" className="text-white-800 :text-white-600 hover:text-purple-600 :hover:text-purple-400 transition-colors">KodeCraft@gmail.com</a>
+                  <a href="mailto:hello.kodecraft@gmail.com" className="text-white-800 :text-white-600 hover:text-purple-600 :hover:text-purple-400 transition-colors">hello.kodecraft@gmail.com</a>
                 </li>
                 <li className="flex items-center">
                   <Phone className="w-7 h-7 text-indigo-600 :text-indigo-400 mr-4" />

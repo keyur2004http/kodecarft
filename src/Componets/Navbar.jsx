@@ -14,7 +14,7 @@ export const Navbar = ({ navItems = [] }) => {
           {/* Logo */}
           <a class="flex items-center text-white" href="/">
             <img
-               src="/Assets/logo/Kode-carft-studio.png"// Replace with your actual image path
+               src="/Assets/logo/Kode-studio-logo.png"// Replace with your actual image path
               alt="Icon"
               className="w-10 h-10  rounded-xl object-cover"
             />

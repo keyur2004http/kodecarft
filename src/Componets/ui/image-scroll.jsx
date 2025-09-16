@@ -9,7 +9,7 @@ const ScreenshotCarousel = ({ screenshots }) => {
     const handleResize = () => {
       const width = window.innerWidth;
       if (width < 640) setImagesPerPage(1);
-      else setImagesPerPage(2); // Always max 2 images visible
+      else setImagesPerPage(2); 
     };
     handleResize();
     window.addEventListener("resize", handleResize);

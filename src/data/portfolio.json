@@ -2,7 +2,7 @@
   "projects": [
     {
       "slug": "infinity",
-      "live": false,
+      "live": true,
       "imageUrl": "/Assets/portfolio/second_page.jpeg",
       "title": "Marketing Agency Site",
       "tags": [

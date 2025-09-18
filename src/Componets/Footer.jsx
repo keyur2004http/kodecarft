@@ -1,7 +1,7 @@
 // src/components/Footer.jsx
 import React from 'react';
 import { motion } from 'framer-motion';
-import { Linkedin, Instagram, Twitter, Mail } from 'lucide-react'; // Social media and contact icons
+import { Linkedin, Instagram, Twitter, Mail, Facebook } from 'lucide-react'; // Social media and contact icons
 import { FaWhatsapp } from "react-icons/fa" // ✅ WhatsApp from react-icons
 
 
@@ -93,7 +93,7 @@ const Footer = () => {
         {/* Social Media Links */}
         <motion.div variants={itemVariants} className="flex justify-center space-x-6 mb-10">
           <motion.a
-            href="https://www.linkedin.com/company/kodecaft/about/?viewAsMember=true"
+            href="https://www.facebook.com/profile.php?id=61581084899943"
             target="_blank"
             rel="noopener noreferrer"
             variants={socialIconVariants}
@@ -101,7 +101,7 @@ const Footer = () => {
             custom={{ '--hover-color': '#6D28D9' }} // Purple-600
             className="text-gray-700 dark:text-gray-300"
           >
-            <Linkedin size={28} />
+            <Facebook size={28} />
           </motion.a>
           <motion.a
             href="https://www.instagram.com/KodeCraft/"
